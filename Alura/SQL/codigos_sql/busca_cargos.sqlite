@@ -1,0 +1,17 @@
+-- Consulta por professor que não está atuando no momento
+SELECT * FROM HistoricoEmprego
+WHERE cargo = 'Professor'
+AND datatermino NOTNULL;
+
+-- Cosulta por oftlamologista ou dermatologista
+SELECT * FROM HistoricoEmprego
+WHERE cargo = 'Oftalmologista' 
+OR cargo = 'Dermatologista';
+
+-- Cosulta por oftlamologista, dermatologista ou professor
+SELECT * FROM HistoricoEmprego
+WHERE cargo IN ('Oftalmologista', 'Dermatologista', 'Professor');
+
+-- Cosulta por colaborador que não seja oftlamologista, dermatologista ou professor
+SELECT * FROM HistoricoEmprego
+WHERE cargo NOT IN ('Oftalmologista', 'Dermatologista', 'Professor');
