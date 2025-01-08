@@ -1,0 +1,18 @@
+# Arquivos .pdf
+*.pdf
+
+# Arquivos de texto .docx e .txt
+*.docx
+*.txt
+
+# Arquivos de imagem .png e .jpg
+*.png
+*.jpg
+*.jpeg
+
+# Arquivos .csv
+*.csv
+
+# Arquivos de ambiente .env
+*.env
+
