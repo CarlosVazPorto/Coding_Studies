@@ -1,0 +1,3 @@
+-- Consulta pela colaboradora Isadora
+SELECT * FROM Colaboradores
+WHERE nome LIKE 'Isadora%';

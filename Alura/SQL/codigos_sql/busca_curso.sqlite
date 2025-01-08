@@ -1,0 +1,10 @@
+-- Consulta geral de treinamentos
+SELECT * FROM Treinamento;
+
+-- Consulta cursos com as palavras "O poder"
+SELECT * FROM Treinamento
+WHERE curso LIKE 'O poder%';
+
+-- Consulta cursos com a palavra "realizar"
+SELECT * FROM Treinamento
+WHERE curso LIKE '%realizar%';

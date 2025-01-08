@@ -12,5 +12,3 @@ SELECT * FROM HistoricoEmprego
 WHERE datatermino NOT NULL
 ORDER BY salario DESC
 LIMIT 5;
-
--- Consulta 
