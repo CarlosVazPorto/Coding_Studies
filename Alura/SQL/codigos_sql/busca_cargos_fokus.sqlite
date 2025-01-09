@@ -15,3 +15,8 @@ WHERE cargo IN ('Oftalmologista', 'Dermatologista', 'Professor');
 -- Cosulta por colaborador que não seja oftlamologista, dermatologista ou professor
 SELECT * FROM HistoricoEmprego
 WHERE cargo NOT IN ('Oftalmologista', 'Dermatologista', 'Professor');
+
+-- Consulta colaboradores cadastrados que estão desempregados no momento
+SELECT COUNT(*)
+FROM HistoricoEmprego
+WHERE datatermino NOTNULL;

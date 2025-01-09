@@ -8,3 +8,8 @@ WHERE curso LIKE 'O poder%';
 -- Consulta cursos com a palavra "realizar"
 SELECT * FROM Treinamento
 WHERE curso LIKE '%realizar%';
+
+-- Consulta para os cursos e instituições especificadas
+SELECT * FROM Treinamento
+WHERE (curso LIKE 'O direito%' AND instituicao = 'da Rocha')
+OR (curso LIKE 'O conforto%' AND instituicao = 'das Neves');
