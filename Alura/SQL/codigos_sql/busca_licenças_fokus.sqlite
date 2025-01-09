@@ -1,0 +1,8 @@
+-- Consulta geral da tabela Licenças
+SELECT *
+FROM Licencas;
+
+-- Consulta quantos colaboradores tiraram férias
+SELECT COUNT(*)
+FROM Licencas
+WHERE tipolicenca = 'férias';
