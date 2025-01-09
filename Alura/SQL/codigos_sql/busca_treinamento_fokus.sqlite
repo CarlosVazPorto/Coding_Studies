@@ -6,3 +6,9 @@ FROM Treinamento;
 SELECT instituicao, COUNT(curso)
 FROM Treinamento
 GROUP BY instituicao;
+
+--Consulta as instituições que possuem mais de 2 cursos
+SELECT instituicao, COUNT(curso)
+FROM Treinamento
+GROUP BY instituicao
+HAVING COUNT(curso) > 2;

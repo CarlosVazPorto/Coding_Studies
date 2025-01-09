@@ -20,3 +20,9 @@ WHERE cargo NOT IN ('Oftalmologista', 'Dermatologista', 'Professor');
 SELECT COUNT(*)
 FROM HistoricoEmprego
 WHERE datatermino NOTNULL;
+
+-- Consulta o número de colaboradores existentes em cada cargo (profissões mais cadastradas no banco de dados)
+SELECT cargo, COUNT(*) AS quantidade
+FROM HistoricoEmprego
+GROUP BY cargo
+HAVING quantidade >= 2;
