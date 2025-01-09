@@ -1,0 +1,15 @@
+-- Consulta geral da tabela faturamento
+SELECT * FROM faturamento;
+
+-- Consulta mês de maior faturamento
+SELECT mes, MAX(faturamento_bruto)
+FROM faturamento;
+
+-- Consulta mês de menor faturamento
+SELECT mes, MIN(faturamento_bruto)
+FROM faturamento;
+
+-- COnsulta total de novos clientes em 2023
+SELECT SUM(numero_novos_clientes) AS 'Novos clientes 2023'
+FROM faturamento
+WHERE mes LIKE '%2023';
