@@ -1,0 +1,13 @@
+-- Consulta geral
+SELECT *
+FROM Dependentes;
+
+-- Consulta tipos de parentesco constantes na tabela
+SELECT parentesco
+FROM Dependentes
+GROUP BY parentesco;
+
+-- Consulta tipos de parenetesco e suas quantidades 
+SELECT parentesco, COUNT(*)
+FROM Dependentes
+GROUP BY parentesco;

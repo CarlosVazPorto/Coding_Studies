@@ -1,0 +1,8 @@
+-- Consulta geral
+SELECT *
+FROM Treinamento;
+
+--Consulta o número de cursos de cada instituição
+SELECT instituicao, COUNT(curso)
+FROM Treinamento
+GROUP BY instituicao;
