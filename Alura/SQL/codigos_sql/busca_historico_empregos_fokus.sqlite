@@ -15,3 +15,6 @@ end AS 'Categoria salarial'
 FROM HistoricoEmprego
 ORDER BY salario;
 
+-- Mudança no nome da tabela HistoricoEmprego para CargosColaboradores
+ALTER TABLE HistoricoEmprego 
+RENAME TO CargosColaboradores;
