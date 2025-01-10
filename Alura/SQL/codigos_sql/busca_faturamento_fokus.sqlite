@@ -33,3 +33,7 @@ FROM faturamento;
 -- Consulta que retorna a média do faturamento bruto arredondada para o valor inteiro inferior
 SELECT FLOOR(faturamento_bruto), FLOOR(despesas)
 FROM faturamento;
+
+-- Consulta que retorna o faturamento bruto médio em uma string 
+SELECT ('O Faturamento Bruto Médio foi ' || CAST(ROUND(AVG(faturamento_bruto), 2) AS TEXT))
+FROM faturamento;
