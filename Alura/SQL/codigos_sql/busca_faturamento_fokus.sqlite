@@ -21,3 +21,15 @@ FROM faturamento;
 -- Consulta a média do lucro líquido
 SELECT AVG(lucro_liquido)
 FROM faturamento;
+
+-- Consulta que retorna a média do faturamento bruto arredondada em 2 casas decimais
+SELECT AVG(faturamento_bruto) AS 'Faturamento bruto médio', ROUND (AVG(faturamento_bruto), 2) AS 'Faturamento arredondado'
+FROM faturamento;
+
+-- Consulta que retorna a média do faturamento bruto arredondada para o valor inteiro superior
+SELECT CEIL(faturamento_bruto), CEIL(despesas)
+FROM faturamento;
+
+-- Consulta que retorna a média do faturamento bruto arredondada para o valor inteiro inferior
+SELECT FLOOR(faturamento_bruto), FLOOR(despesas)
+FROM faturamento;
