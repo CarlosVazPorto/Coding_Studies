@@ -1,0 +1,24 @@
+-- Consulta se CPFs cadastrados têm todos os 11 caracteres preenchidos
+SELECT nome, LENGTH(CPF) AS digitos
+FROM Colaboradores
+WHERE digitos = 11;
+
+-- Consulta quantos dos CPFs cadastrados têm todos os 11 caracteres preenchidos
+-- A tabela Colaboradores tem 150 pessoas regisradas
+SELECT COUNT(*), LENGTH(CPF) AS digitos
+FROM Colaboradores
+WHERE digitos = 11;
+
+-- Consulta nome, CPF e endereço dos colaboradores e retorna em forma de texto para cada registro
+-- A concatenação no SQLite é feita com || . Em outros SGBDs pode ser feita com a função CONCAT
+SELECT ('A pessoa colaboradora ' || nome || ' de CPF ' || cpf || ' possui o seguinte endereço: ' || endereco || '.') AS texto
+FROM Colaboradores;
+
+-- Retorna a mesma consulta acima com todas as letras maiúsculas
+-- Caracteres especiais (com acento, por exemplo) não serão retornados maiúsculos 
+SELECT UPPER('A pessoa colaboradora ' || nome || ' de CPF ' || cpf || ' possui o seguinte endereço: ' || endereco || '.') AS texto
+FROM Colaboradores;
+
+-- Retorna a mesma consulta acima com todas as letras minúsculas 
+SELECT LOWER('A pessoa colaboradora ' || nome || ' de CPF ' || cpf || ' possui o seguinte endereço: ' || endereco || '.') AS texto
+FROM Colaboradores;
