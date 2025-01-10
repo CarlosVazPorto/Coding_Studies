@@ -1,0 +1,4 @@
+-- Consulta 3: Buscar apenas os alunos que fazem aniversário em fevereiro
+SELECT nome_aluno, STRFTIME('%d/%m/%Y', data_nascimento) AS Aniversario, genero, endereco, telefone_contato, email
+FROM Alunos
+WHERE STRFTIME('%m', data_nascimento) = '02';

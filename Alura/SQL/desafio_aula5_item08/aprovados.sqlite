@@ -1,0 +1,8 @@
+-- Consulta 5: Retornar se o aluno está ou não aprovado
+-- O aluno é considerado aprovado se a sua nota foi igual ou maior que 6
+SELECT id_aluno AS Aluno, nota,
+	CASE 
+    	WHEN nota >= 6 THEN 'Aprovado'
+        ELSE 'Reprovado'
+    END AS Resultado
+FROM Notas;

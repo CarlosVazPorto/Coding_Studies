@@ -1,0 +1,13 @@
+-- Consulta geral da tabela Notas
+SELECT * 
+FROM Notas;
+
+-- Consulta geral da tabela Disciplinas
+SELECT * 
+FROM Disciplinas;
+
+-- Consulta 1: Retornar a média de Notas dos Alunos em história.
+-- História é a disciplina de ID 2
+SELECT AVG(Nota) AS Nota_media
+FROM Notas
+WHERE id_disciplina = 2;

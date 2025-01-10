@@ -1,0 +1,8 @@
+-- Consulta geral da tabela alunos 
+SELECT * 
+FROM Alunos;
+
+-- Consulta 2: Retornar as informações dos alunos cujo nome começa com 'A'
+SELECT * 
+FROM Alunos	
+WHERE nome_aluno LIKE 'A%';

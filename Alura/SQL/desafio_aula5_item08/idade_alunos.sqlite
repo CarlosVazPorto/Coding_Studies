@@ -1,0 +1,6 @@
+-- Consulta 4: Realizar uma consulta que calcula a idade dos Alunos 
+SELECT nome_aluno, 
+       STRFTIME('%d/%m/%Y', data_nascimento) AS Aniversario,
+       FLOOR((JULIANDAY('now') - JULIANDAY(data_nascimento)) / 365) AS idade
+FROM Alunos
+ORDER BY nome_aluno ASC;
