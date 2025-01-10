@@ -7,11 +7,11 @@ ORDER BY duracao ASC;
 -- Consulta que retorna os valores salariais categorizados conforme definido pelo usuário 
 -- Observação: não esquecer da vírgula após o último campo do SELECT
 SELECT id_colaborador, cargo, salario,
-CASE 
-WHEN salario < 5000 then 'Baixo'
-when salario BETWEEN 5000 AND 10000 THEN 'Médio'
-ELSE 'Alto'
-end AS 'Categoria salarial'
+    CASE 
+        WHEN salario < 5000 then 'Baixo'
+        WHEN salario BETWEEN 5000 AND 10000 THEN 'Médio'
+        ELSE 'Alto'
+    END AS 'Categoria salarial'
 FROM HistoricoEmprego
 ORDER BY salario;
 
