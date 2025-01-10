@@ -1,0 +1,6 @@
+-- Consulta qual o intervalo de tempo de duração de cada contrato
+SELECT id_colaborador, JULIANDAY(datatermino) - JULIANDAY(datacontratacao) AS duracao
+FROM HistoricoEmprego
+WHERE datatermino IS NOT NULL
+ORDER BY duracao ASC;
+

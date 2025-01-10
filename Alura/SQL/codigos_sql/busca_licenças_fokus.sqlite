@@ -6,3 +6,7 @@ FROM Licencas;
 SELECT COUNT(*)
 FROM Licencas
 WHERE tipolicenca = 'férias';
+
+-- Consulta que retorna o ano e o mês da DataInicio para cada colaborador
+SELECT id_colaborador, STRFTIME('%Y/%m', datainicio) AS 'Data de início'
+FROM Licencas;
