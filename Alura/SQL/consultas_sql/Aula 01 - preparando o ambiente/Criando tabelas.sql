@@ -13,11 +13,11 @@ CREATE TABLE colaboradores (
     DataContratacao DATE,
     Telefone VARCHAR(20),
     Email VARCHAR(100),
-	Rua VARCHAR(100) NOT NULL,
-	Bairro VARCHAR(100) NOT NULL,
-	Cidade VARCHAR(100) NOT NULL,
-	Estado VARCHAR(2) NOT NULL,
-	cep VARCHAR(8) NOT NULL
+	  Rua VARCHAR(100) NOT NULL,
+	  Bairro VARCHAR(100) NOT NULL,
+	  Cidade VARCHAR(100) NOT NULL,
+	  Estado VARCHAR(2) NOT NULL,
+	  CEP VARCHAR(8) NOT NULL
 );
 
 
