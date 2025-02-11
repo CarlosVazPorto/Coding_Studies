@@ -8,10 +8,22 @@ FROM colaboradores;
 SELECT * 
 FROM fornecedores;
 
--- Consulta os campos selecionados das duas tabelas (colaboradores e fornecedores) e os retorna em uma única tabela
+-- Consulta os campos selecionados das duas tabelas (colaboradores e fornecedores) e retorna os registros ÚNICOS em uma só tabela
 SELECT rua, bairro, cidade, estado, cep  
 FROM colaboradores
 UNION 
 SELECT rua, bairro, cidade, estado, cep  
 FROM fornecedores;
 
+
+-- Consulta os registros onde a rua = 'Rua das flores - 210' da tabela colaboradores 
+SELECT * 
+FROM colaboradores
+WHERE rua = 'Rua das flores - 210';
+
+-- Consulta os campos selecionados das duas tabelas (colaboradores e fornecedores) e retorna TODOS os registros em uma só tabela
+SELECT nome, rua, bairro, cidade, estado, cep  
+FROM colaboradores
+UNION ALL 
+SELECT nome, rua, bairro, cidade, estado, cep  
+FROM fornecedores;
