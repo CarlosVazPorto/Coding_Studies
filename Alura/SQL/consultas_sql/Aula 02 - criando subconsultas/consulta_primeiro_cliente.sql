@@ -23,3 +23,20 @@ WHERE id = (
   FROM pedidos 
   WHERE data_hora = '2023-01-02 08:15:00'
 );
+
+-- Consulta a id de todos os clientes que fizeram pedidos em um determinado mês 
+SELECT id_cliente 
+FROM pedidos 
+WHERE strftime('%m', data_hora) = '01';
+
+-- Consulta o nome de todos os clientes que fizeram pedidos em um determinado mês 
+-- Observação: o uso do operador = retorna somente a primeira correspondência da subconsulta
+-- Observação: o uso do operador IN retorna todas as correspondências presentes na subconsulta 
+SELECT nome 
+FROM clientes 
+WHERE id IN (
+  SELECT id_cliente 
+  FROM pedidos 
+  WHERE strftime('%m', data_hora) = '01'
+  );
+
