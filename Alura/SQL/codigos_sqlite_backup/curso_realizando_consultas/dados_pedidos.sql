@@ -1,3 +1,7 @@
+-- Inserindo dados nas tabelas do curso "Realizando consultas com SQL: Joins, Views e transações" da Alura
+-- Professora Danielle Oliveira
+-- Janeiro/2025
+
 INSERT INTO "pedidos" ('id','id_cliente','data_hora','status') VALUES 
  ('01','10','2023-01-02 08:15:00','Em Andamento'), 
  ('02','3','2023-01-02 08:45:00','Concluído'), 
@@ -449,6 +453,4 @@ INSERT INTO "pedidos" ('id','id_cliente','data_hora','status') VALUES
  ('448','23','2023-10-06 08:00:00','Em Andamento'), 
  ('449','6','2023-10-06 09:45:00','Concluído'), 
  ('450','8','2023-10-06 10:30:00','Entregue');
-
-
 

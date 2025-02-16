@@ -7,9 +7,6 @@ INSERT INTO colaboradores (id, nome, cargo, data_contratacao, telefone, email, r
 (06, 'Inês Lima', 'Barista', '2022-04-02', '615553421', 'ines.lima@email.com', 'Rua das Entregas - 280', 'Entregas Rápidas', 'São Paulo', 'SP', '90000001'),
 (07, 'Antonio Artur', 'Entregador', '2023-01-10', '568442577', 'antonio.artur@email.com', 'Rua das flores - 210', 'Centro', 'São Paulo', 'SP', '20000001');
 
-SELECT *
-FROM colaboradores;
-
 INSERT INTO fornecedores (id, nome, contato, telefone, email, rua, bairro, cidade, estado, cep) VALUES
 (01, 'Café do Brasil Ltda.', 'Maria Oliveira', '115551234', 'cafebrasil@email.com', 'Rua do Café - 123', 'Centro', 'São Paulo', 'SP', '01000000'),
 (02, 'Laticínios Sabor Puro', 'João Santos', '215555678', 'laticinios@email.com', 'Avenida das Vacas - 456', 'Leite Feliz', 'Rio de Janeiro', 'RJ', '20000000'),
@@ -17,9 +14,6 @@ INSERT INTO fornecedores (id, nome, contato, telefone, email, rua, bairro, cidad
 (04, 'Padaria da Cidade', 'Sofia Alves', '415552345', 'padariacidade@email.com', 'Rua dos Pães - 101', 'Pão Quentinho', 'Salvador', 'BA', '40000000'),
 (05, 'Fornecedor de Chocolate', 'Rui Lima', '515558765', 'chocolatelovers@email.com', 'Rua do Cacau - 210', 'Chocolateira', 'Florianópolis', 'SC', '88000000'),
 (06, 'Distribuidora de Bebidas', 'Ana Pereira', '615553421', 'bebidaspremium@email.com', 'Avenida das Garrafas - 35', 'Copo Cheio', 'Porto Alegre', 'RS', '90000000');
-
-SELECT *
-FROM fornecedores;
 
 INSERT INTO produtos (ID, Nome, Descricao, Preco, Categoria) VALUES
 (01, 'Espresso', 'Um shot de espresso forte e encorpado.', 2.50, 'Café'),
@@ -52,9 +46,6 @@ INSERT INTO produtos (ID, Nome, Descricao, Preco, Categoria) VALUES
 (28, 'Croissant de Amêndoa', 'Croissant recheado com chocolate belga.', 3.50, 'Sobremesa'),
 (29, 'Tofu Scramble', 'Scramble de tofu com vegetais e espinafre.', 6.50, 'Sobremesa'),
 (30, 'Salada de Atum', 'Salada de atum com feijão e pimentão.', 8.00, 'Almoço');
-
-SELECT *
-FROM produtos;
 
 INSERT INTO clientes (id, nome, telefone, email, endereco) VALUES
 (01, 'Maria Silva', '115551234', 'maria.silva@email.com', 'Rua das Flores, 123, Cidade A'),
@@ -96,5 +87,13 @@ INSERT INTO clientes (id, nome, telefone, endereco) VALUES
 INSERT INTO clientes (id, nome, telefone, endereco) VALUES
 (27, 'Paulo Sousa', '1415555678', 'Travessa das Marés, 876, Cidade N');
 
-SELECT *
-FROM clientes;
+-- Inserindo novos clientes
+INSERT INTO Clientes (id, nome, telefone, email, endereco)
+VALUES (28, 'João Santos', '215555678', 'joao.santos@email.com', 'Avenida Principal, 456, Cidade B'),
+       (29, 'Carla Ferreira', '315557890', 'carla.ferreira@email.com', 'Travessa das Ruas, 789, Cidade C');
+
+-- Insere novo produto na tabela 
+INSERT INTO produtos (id, nome, descricao, preco, categoria)
+VALUES 
+	(31, 'Lasanha à Bolonhesa', 'Deliciosa lasanha caseira com molho bolonhesa', 12.50, 'Almoço');
+
