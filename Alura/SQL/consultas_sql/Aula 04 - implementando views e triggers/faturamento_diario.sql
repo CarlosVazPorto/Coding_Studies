@@ -19,7 +19,7 @@ CREATE TABLE faturamento_diario (
 -- Cria TRIGGER que insere dados na tabela fatfaturamento_diario 
 CREATE TRIGGER calcula_faturamento_diario 
 AFTER INSERT ON itens_pedidos 
-FOR EACH ROw 
+FOR EACH ROW 
 BEGIN 
   DELETE FROM faturamento_diario;
   INSERT INTO faturamento_diario (dia, faturamento_total)
