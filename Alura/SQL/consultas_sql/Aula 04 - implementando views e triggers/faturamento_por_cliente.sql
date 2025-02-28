@@ -17,5 +17,5 @@ JOIN pedidos AS p
   ON c.id = p.id_cliente 
 JOIN itens_pedidos AS ip 
   ON p.id = ip.id_pedido
-GROUP BY p.id, c.nome;
+GROUP BY c.nome;
 
