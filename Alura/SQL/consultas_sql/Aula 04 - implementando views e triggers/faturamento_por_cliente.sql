@@ -11,7 +11,7 @@ JOIN produtos AS pr
   ON pr.id = ip.id_produto;
 
 -- Calculando o faturamento total dos pedidos por cliente 
-SELECT c.nome, SUM(ip.preco_unitario) AS valor_total_pedido
+SELECT c.nome AS nome_cliente, SUM(ip.preco_unitario) AS valor_total_pedido
 FROM clientes AS c 
 JOIN pedidos AS p 
   ON c.id = p.id_cliente 
