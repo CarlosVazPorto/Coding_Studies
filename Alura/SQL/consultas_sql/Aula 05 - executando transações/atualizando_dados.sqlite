@@ -1,0 +1,26 @@
+-- Consultando dados nas tabelas do curso "Realizando consultas com SQL: Joins, Views e transações" da Alura
+-- Professora Danielle Oliveira
+-- Fevereiro/2025
+
+-- Comando do SQLite (somente) que atualiza e valida as FOREIGN KEYS (FK) 
+PRAGMA foreign_keys = ON;
+
+-- Consulta o produto com id = 31 na tabela produtos 
+SELECT * 
+FROM produtos 
+WHERE id = 31;
+
+-- Atualiza o preço do produto com id = 31 para 13.00 
+UPDATE produtos 
+SET preco = 13.00 
+WHERE id = 31;
+
+-- Consulta os produtos cujo nome se inicia por 'croissant' 
+SELECT * 
+FROM produtos 
+WHERE nome LIKE 'croissant%';
+
+-- Atualiza a descrição do item com id = 28 (Croissant de Amêndoa) 
+UPDATE produtos
+SET descricao = 'Croissant recheado com amêndoas.'
+WHERE id = 28;
