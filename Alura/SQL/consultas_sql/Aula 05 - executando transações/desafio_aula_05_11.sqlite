@@ -3,11 +3,43 @@
 -- Março/2025
 
 -- Consulta 1: Buscar o nome do professor e a turma que ele é orientador
+SELECT Nome_Professor, Nome_Turma 
+FROM Professores AS p 
+INNER JOIN Turmas AS t 
+    ON p.ID_Professor = t.ID_Professor_Orientador;
 
 -- Consulta 2: Retornar o nome e a nota do aluno que possui a melhor nota na disciplina de Matemática
+SELECT Nome_Aluno, MAX(Nota) AS Maior_Nota
+FROM Alunos AS a
+INNER JOIN Notas AS n 
+    ON a.ID_Aluno = n.ID_Aluno
+INNER JOIN Disciplinas AS d 
+    ON d.ID_Disciplina = n.ID_Disciplina 
+WHERE n.ID_Disciplina = 1; 
 
 -- Consulta 3: Identificar o total de alunos por turma
+SELECT Nome_Turma, COUNT(ta.ID_Turma) AS Total_Alunos_Turma
+FROM Turmas AS t
+INNER JOIN Turma_Alunos AS ta
+    ON t.ID_Turma = ta.ID_Turma
+GROUP BY Nome_Turma;
 
 -- Consulta 4: Listar os Alunos e as disciplinas em que estão matriculados
+SELECT a.Nome_Aluno, d.Nome_Disciplina 
+FROM Alunos AS a 
+INNER JOIN Turma_Alunos AS ta 
+    ON a.ID_Aluno = ta.ID_Aluno 
+INNER JOIN Turma_Disciplinas AS td 
+    ON ta.ID_Turma = td.ID_Turma
+INNER JOIN Disciplinas AS d 
+    ON d.ID_Disciplina = td.ID_Disciplina;
 
 -- Consulta 5: Criar uma view que apresenta o nome, a disciplina e a nota dos alunos
+CREATE VIEW Alunos_Disciplinas_Notas AS 
+SELECT a.Nome_Aluno, d.Nome_Disciplina, n.Nota 
+FROM Alunos AS a 
+INNER JOIN Notas AS n 
+    ON a.ID_ALUNO = n.ID_Aluno
+INNER JOIN Disciplinas AS d
+    ON d.ID_Disciplina = n.ID_Disciplina;
+
