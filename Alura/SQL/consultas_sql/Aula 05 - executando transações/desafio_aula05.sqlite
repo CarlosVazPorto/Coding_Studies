@@ -1,0 +1,87 @@
+-- Desafios práticos do curso "Realizando consultas com SQL: Joins, Views e transações" da Alura
+-- Professora Danielle Oliveira
+-- Março/2025
+
+-- 01. Traga todos os dados da cliente Maria Silva.
+SELECT *
+FROM clientes 
+WHERE nome = 'Maria Silva';
+
+-- 02. Busque o ID do pedido e o ID do cliente dos pedidos onde o status esteja como entregue.
+SELECT id, id_cliente 
+FROM pedidos 
+WHERE status = 'Entregue';
+
+-- 03. Retorne todos os produtos onde o preço seja maior que 10 e menor que 15.
+SELECT * 
+FROM produtos 
+WHERE preco > 10 AND preco < 15;
+
+-- 04. Busque o nome e cargo dos colaboradores que foram contratados entre 2022-01-01 e 2022-06-31.
+SELECT nome, cargo 
+FROM colaboradores 
+WHERE data_contratacao BETWEEN '2022-01-01' AND '2022-06-31';
+
+-- 05. Recupere o nome do cliente que fez o primeiro pedido.
+SELECT nome 
+FROM clientes
+WHERE id = (SELECT id_cliente 
+            FROM pedidos 
+            ORDER BY data_hora ASC
+            LIMIT 1);
+
+-- 06. Liste os produtos que nunca foram pedidos.
+SELECT * 
+FROM produtos
+WHERE id NOT IN (SELECT id_produto
+                 FROM itens_pedidos);
+
+-- 07. Liste os nomes dos clientes que fizeram pedidos entre 2023-01-01 e 2023-12-31.
+SELECT c.nome 
+FROM clientes AS c
+INNER JOIN pedidos AS p 
+ON c.id = p.id_cliente 
+WHERE p.data_hora 
+BETWEEN '2023-01-01' AND '2023-12-31';
+
+-- 08. Recupere os nomes dos produtos que estão em menos de 15 pedidos.
+SELECT p.nome 
+FROM produtos AS p 
+INNER JOIN itens_pedidos AS ip 
+ON p.id = ip.id_produto 
+GROUP BY p.nome 
+HAVING COUNT(ip.id_pedido) < 15;
+
+-- 09. Liste os produtos e o ID dos pedidos que foram realizados pelo cliente "Pedro Alves" ou pela cliente "Ana Rodrigues".
+SELECT p.nome, ip.id_pedido 
+FROM produtos AS p 
+INNER JOIN itens_pedidos AS ip 
+    ON p.id = ip.id_produto
+INNER JOIN pedidos AS pe 
+    ON ip.id_pedido = pe.id 
+INNER JOIN clientes AS c 
+    ON pe.id_cliente = c.id 
+WHERE c.nome = 'Pedro Alves' OR c.nome = 'Ana Rodrigues';
+
+-- 10. Recupere o nome e o ID do cliente que mais comprou (valor) no Serenatto.
+SELECT c.nome, c.id
+FROM clientes AS c 
+INNER JOIN pedidos AS pe
+    ON c.id = pe.id_cliente
+INNER JOIN itens_pedidos AS ip
+    ON pe.id = ip.id_pedido
+GROUP BY c.nome 
+ORDER BY SUM(ip.quantidade * ip.preco_unitario) DESC
+LIMIT 1;
+
+-- A solução da Alura é diferente, retorna também o valor total gasto pelo cliente, mas isso não foi solicitado explicitamente no enunciado do desafio.
+SELECT pe.id_cliente, c.nome, SUM(ip.quantidade * ip.preco_unitario) AS valor_total 
+FROM clientes AS c 
+INNER JOIN pedidos AS pe 
+    ON c.id = pe.id_cliente 
+INNER JOIN itens_pedidos AS ip 
+    ON pe.id = ip.id_pedido 
+GROUP BY pe.id_cliente 
+ORDER BY valor_total DESC 
+LIMIT 1;
+
