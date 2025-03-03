@@ -2,4 +2,36 @@
 -- Professora Danielle Oliveira
 -- Março/2025
 
--- 
+-- Consulta dados de um colaborador específico 
+SELECT * 
+FROM colaboradores 
+WHERE id = 3;
+
+-- Exclusão dos dados de um colaborador que se desligou da empresa 
+DELETE 
+FROM colaboradores 
+WHERE id = 3;
+
+-- Consulta dados de um cliente específico 
+SELECT * 
+FROM clientes 
+WHERE id = 27;  
+
+-- Consulta se há pedidos feitos pelo cliente com id = 27 
+SELECT * 
+FROM pedidos 
+WHERE id_cliente = 27;
+
+-- Validando a consulta dos pedidos do cliente com id = 27 na tabela itens_pedidos 
+SELECT * 
+FROM itens_pedidos 
+WHERE id_pedido = 451;
+
+-- Se a instrução abaixo for executada, todos os dados referentes ao cliente com id = 27 serão 
+-- excluídos do banco de dados, pois na criação da tabela clientes usamos o comando 
+-- ON DELETE CASCADE (deleção em cascata).
+-- Serão apagados também os dados das tabelas pedidos e itens_pedidos referentes a esse 
+-- cliente, o que pode prejudicar a adequada avaliação do faturamento.
+DELETE 
+FROM clientes
+WHERE id = 27; 
