@@ -1,0 +1,28 @@
+-- Consultando dados nas tabelas do curso "Realizando consultas com SQL: Joins, Views e transações" da Alura
+-- Professora Danielle Oliveira
+-- Março/2025
+
+-- Criação de uma Transação: é um conjunto de comandos que funcionam em bloco, ou seja,
+-- ou todos os comandos são executados com sucesso, ou nenhum deles é executado.
+-- A transação é iniciada com o comando BEGIN TRANSACTION e finalizada com 
+-- o comando COMMIT ou ROLLBACK.
+-- No SQLite as transações funcionam somente na aba onde foram criadas.
+
+-- A transação abaixo irá apagar todos os registros das tabelas clientes e pedidos.
+-- O comando ROLLBACK no final da transação desfaz todas as operações realizadas.
+BEGIN TRANSACTION;
+
+DELETE FROM clientes;
+DELETE FROM pedidos;
+
+ROLLBACK;
+
+-- A seguinte transação irá atualizar o status de todos os pedidos 'Em Andamento' 
+-- para 'Concluído'.
+-- O comando COMMIT no final da transação confirma todas as operações realizadas.
+BEGIN TRANSACTION;
+
+UPDATE pedidos SET status = 'Concluído' WHERE status = 'Em Andamento';
+
+COMMIT; 
+
