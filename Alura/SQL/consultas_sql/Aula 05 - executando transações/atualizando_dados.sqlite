@@ -1,6 +1,6 @@
 -- Consultando dados nas tabelas do curso "Realizando consultas com SQL: Joins, Views e transações" da Alura
 -- Professora Danielle Oliveira
--- Fevereiro/2025
+-- Março/2025
 
 -- Comando do SQLite (somente) que atualiza e valida as FOREIGN KEYS (FK) 
 PRAGMA foreign_keys = ON;
