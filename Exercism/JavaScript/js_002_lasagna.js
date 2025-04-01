@@ -68,4 +68,3 @@ export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
   return (numberOfLayers * PREPARATION_MINUTES_PER_LAYER + actualMinutesInOven);
 }
 
-console.log("done");
