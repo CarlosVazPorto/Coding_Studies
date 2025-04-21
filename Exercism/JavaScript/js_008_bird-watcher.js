@@ -17,4 +17,23 @@ export function totalBirdCount(birdsPerDay) {
     }
     return total;
   }
+
+
+/**
+ * Calculates the total number of birds seen in a specific week.
+ *
+ * @param {number[]} birdsPerDay
+ * @param {number} week
+ * @returns {number} birds counted in the given week
+ */
+export function birdsInWeek(birdsPerDay, week) {
+    let total = 0;
+    let startingIndex = (week - 1) * 7;
+    
+    for (let i = startingIndex; i < startingIndex + 7; i++) {
+      total += birdsPerDay[i];
+    }
+  
+    return total;
+  }
   
