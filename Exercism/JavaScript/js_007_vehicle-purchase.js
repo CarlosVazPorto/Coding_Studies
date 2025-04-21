@@ -17,4 +17,20 @@ export function needsLicense(kind) {
       return false;
     }
   }
-  
+
+/**
+ * Helps choosing between two options by recommending the one that
+ * comes first in dictionary order.
+ *
+ * @param {string} option1
+ * @param {string} option2
+ * @returns {string} a sentence of advice which option to choose
+ */
+export function chooseVehicle(option1, option2) {
+    if (option1 < option2) {
+      return `${option1} is clearly the better choice.`;
+    } else {
+      return `${option2} is clearly the better choice.`;
+    }
+  }
+
