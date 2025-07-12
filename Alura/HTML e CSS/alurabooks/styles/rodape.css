@@ -11,3 +11,11 @@ hr {
     font-size: 1em;
     font-weight: 400;
 }
+
+@media screen and (min-width: 1024px) {
+    .rodape {
+        display: flex;
+    }
+
+    
+}
