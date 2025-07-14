@@ -35,7 +35,12 @@
     }
 
     .topicos__link {
-        font-size: 1.5em;;
+        font-size: 1.5em;
+    }
+
+    .topicos__link:hover {
+        color: var(--laranja);
+        background-color: var(--branco);
     }
 }
 
