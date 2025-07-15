@@ -1,4 +1,9 @@
 const inputItem = document.getElementById("input-item");
 
-console.log(inputItem.value);
+const botaoAdicionar = document.getElementById("adicionar-item");
 
+botaoAdicionar.addEventListener("click", (evento) => {
+    evento.preventDefault();
+    console.log(inputItem.value);
+    
+})
