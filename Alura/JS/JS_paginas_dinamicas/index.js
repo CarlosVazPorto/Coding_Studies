@@ -12,5 +12,5 @@ botaoAdicionar.addEventListener("click", (evento) => {
     const itemDaLista = document.createElement("li");
     const containerItemdaLista = document.createElement("div");
     containerItemdaLista.classList.add("lista-item-container");
-
+    
 })
