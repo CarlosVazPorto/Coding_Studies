@@ -48,6 +48,15 @@ botaoAdicionar.addEventListener("click", (evento) => {
     itemData.innerText = dataCompleta;
     itemData.classList.add("texto-data");
 
+    // Ouvinte de eventos do input checkbox para mudança de textDecoration
+    inputCheckbox.addEventListener("click", function() {
+        if (inputCheckbox.checked) {
+            nomeItem.style.textDecoration = "line-through";
+        } else {
+            nomeItem.style.textDecoration = "none";
+        }
+    });
+
     // Inserção dos dados de cada item dentro do container (div)
     containerItemdaLista.appendChild(inputCheckbox);
     containerItemdaLista.appendChild(nomeItem);
