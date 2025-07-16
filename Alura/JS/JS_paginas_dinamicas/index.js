@@ -29,9 +29,10 @@ botaoAdicionar.addEventListener("click", (evento) => {
     nomeItem.innerText = inputItem.value;
 
     // Gerando a data atual
-    const diaDaSemana = new Date().toLocaleDateString("pt-BR", {
+    const weekDay = new Date().toLocaleDateString("pt-BR", {
         weekday: "long"
     });
+    const diaDaSemana = weekDay.charAt(0).toUpperCase() + weekDay.substring(1);
     const data = new Date().toLocaleDateString("pt-BR");
     
     // Gerando a hora atual local
