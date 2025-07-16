@@ -14,29 +14,19 @@ botaoAdicionar.addEventListener("click", (evento) => {
         return;
     }
 
-    // Elementos da lista no DOM
+    // Criando elementos da lista
     const itemDaLista = document.createElement("li");
     const containerItemdaLista = document.createElement("div");
     containerItemdaLista.classList.add("lista-item-container");
     
-    // Input do tipo checkbox com id dinâmico
+    // Criando elemento do input do tipo checkbox com id dinâmico
     const inputCheckbox = document.createElement("input");
     inputCheckbox.type = "checkbox";
     inputCheckbox.id = "checkbox-" + contador++;
     
-    // Valor do texto dos itens da lista
+    // Criando elemento de texto dos itens da lista
     const nomeItem = document.createElement("p");
     nomeItem.innerText = inputItem.value;
-
-    // Inserção dos dados de cada item dentro do container (div)
-    containerItemdaLista.appendChild(inputCheckbox);
-    containerItemdaLista.appendChild(nomeItem);
-
-    // Criação de cada container para cada item da lista (li)
-    itemDaLista.appendChild(containerItemdaLista);
-
-    // Inserindo cada item da lista (li) na lista (ul)
-    listaDeCompras.appendChild(itemDaLista);
 
     // Gerando a data atual
     const diaDaSemana = new Date().toLocaleDateString("pt-BR", {
@@ -44,7 +34,29 @@ botaoAdicionar.addEventListener("click", (evento) => {
     });
     const data = new Date().toLocaleDateString("pt-BR");
     
-    const dataCompleta = `${diaDaSemana} (${data})`;
-    console.log(dataCompleta);
+    // Gerando a hora atual local
+    const hora = new Date().toLocaleTimeString("pt-BR", {
+        hour: "numeric",
+        minute: "numeric"
+    })
+    
+    // String da data completa
+    const dataCompleta = `${diaDaSemana} (${data}) às ${hora}`;
+
+    // Criando elemento da data
+    const itemData = document.createElement("p");
+    itemData.innerText = dataCompleta;
+    itemData.classList.add("texto-data");
+
+    // Inserção dos dados de cada item dentro do container (div)
+    containerItemdaLista.appendChild(inputCheckbox);
+    containerItemdaLista.appendChild(nomeItem);
+
+    // Criação de cada container para cada item da lista (li)
+    itemDaLista.appendChild(containerItemdaLista);
+    itemDaLista.appendChild(itemData);
+
+    // Inserindo cada item da lista (li) na lista (ul)
+    listaDeCompras.appendChild(itemDaLista);
 
 })
