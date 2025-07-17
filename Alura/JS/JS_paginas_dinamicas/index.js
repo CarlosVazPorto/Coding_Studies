@@ -69,4 +69,21 @@ botaoAdicionar.addEventListener("click", (evento) => {
     // Inserindo cada item da lista (li) na lista (ul)
     listaDeCompras.appendChild(itemDaLista);
 
+    // Verificando se a lista está vazia
+    verificarListaVazia();
 })
+
+// Manipulação da mensagem de lista vazia
+const mensagemListaVazia = document.querySelector(".mensagem-lista-vazia");
+
+function verificarListaVazia() {
+    const itensDaLista = listaDeCompras.querySelectorAll("li");
+    if (itensDaLista.length === 0) {
+        mensagemListaVazia.style.display = "block";
+    } else {
+        mensagemListaVazia.style.display = "none";
+    }
+}
+
+// Verificando se a lista está vazia
+verificarListaVazia();
