@@ -69,7 +69,7 @@ botaoAdicionar.addEventListener("click", (evento) => {
     // Inserindo cada item da lista (li) na lista (ul)
     listaDeCompras.appendChild(itemDaLista);
 
-    // Verificando se a lista está vazia
+    // Verificando se a lista está vazia (após autalizações nos itens da lista)
     verificarListaVazia();
 })
 
@@ -85,5 +85,5 @@ function verificarListaVazia() {
     }
 }
 
-// Verificando se a lista está vazia
+// Verificando se a lista está vazia (ao inicializar o aplicativo)
 verificarListaVazia();
