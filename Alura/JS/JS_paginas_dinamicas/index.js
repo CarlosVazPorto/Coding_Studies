@@ -1,13 +1,13 @@
 // Importação da função criarItemDaLista
-import { criarItemDaLista } from "./scripts/criarItemDaLista";
+import { criarItemDaLista } from "./scripts/criarItemDaLista.js";
 
 // Variáveis de acesso aos dados da página
 const listaDeCompras = document.getElementById("lista-de-compras");
 const botaoAdicionar = document.getElementById("adicionar-item");
-let contador = 0;
 
 // Lógica do botão "Salvar item"
 botaoAdicionar.addEventListener("click", (evento) => {
+    evento.preventDefault();
 
     // Chamada da função de criação de itens na lista
     const itemDaLista = criarItemDaLista();

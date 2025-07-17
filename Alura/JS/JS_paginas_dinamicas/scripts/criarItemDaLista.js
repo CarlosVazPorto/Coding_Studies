@@ -1,10 +1,11 @@
 // Acesso aos dados de entrada do usuário para a lista (input) 
 const inputItem = document.getElementById("input-item");
 
+// Inicialização do contador
+let contador = 0;
+
 // Criação de item da lista
 export function criarItemDaLista () {
-    evento.preventDefault();
-    
     // Prevenção da inserção de itens vazios na lista
     if (inputItem.value === "") {
         alert("Por favor, insira um item!");
