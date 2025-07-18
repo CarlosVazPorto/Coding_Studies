@@ -1,5 +1,6 @@
-// Importação da função criarItemDaLista
+// Importação de módulos
 import { criarItemDaLista } from "./scripts/criarItemDaLista.js";
+import verificarListaVazia from "./scripts/verificarListaVazia.js";
 
 // Variáveis de acesso aos dados da página
 const listaDeCompras = document.getElementById("lista-de-compras");
@@ -16,20 +17,8 @@ botaoAdicionar.addEventListener("click", (evento) => {
     listaDeCompras.appendChild(itemDaLista);
 
     // Verificando se a lista está vazia (após autalizações nos itens da lista)
-    verificarListaVazia();
+    verificarListaVazia(listaDeCompras);
 })
 
-// Manipulação da mensagem de lista vazia
-const mensagemListaVazia = document.querySelector(".mensagem-lista-vazia");
-
-function verificarListaVazia() {
-    const itensDaLista = listaDeCompras.querySelectorAll("li");
-    if (itensDaLista.length === 0) {
-        mensagemListaVazia.style.display = "block";
-    } else {
-        mensagemListaVazia.style.display = "none";
-    }
-}
-
 // Verificando se a lista está vazia (ao inicializar o aplicativo)
-verificarListaVazia();
+verificarListaVazia(listaDeCompras);
