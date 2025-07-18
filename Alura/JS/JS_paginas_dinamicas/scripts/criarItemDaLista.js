@@ -1,3 +1,6 @@
+// Importação de módulo
+import gerarDiaDaSemana from "./gerarDiaDaSemana.js";
+
 // Acesso aos dados de entrada do usuário para a lista (input) 
 const inputItem = document.getElementById("input-item");
 
@@ -26,22 +29,9 @@ export function criarItemDaLista () {
     const nomeItem = document.createElement("p");
     nomeItem.innerText = inputItem.value;
 
-    // Gerando a data atual
-    const weekDay = new Date().toLocaleDateString("pt-BR", {
-        weekday: "long"
-    });
-    const diaDaSemana = weekDay.charAt(0).toUpperCase() + weekDay.substring(1);
-    const data = new Date().toLocaleDateString("pt-BR");
+    // Função modular de geração de data
+    const dataCompleta = gerarDiaDaSemana();
     
-    // Gerando a hora atual local
-    const hora = new Date().toLocaleTimeString("pt-BR", {
-        hour: "numeric",
-        minute: "numeric"
-    })
-    
-    // String da data completa
-    const dataCompleta = `${diaDaSemana} (${data}) às ${hora}`;
-
     // Criando elemento da data
     const itemData = document.createElement("p");
     itemData.innerText = dataCompleta;
