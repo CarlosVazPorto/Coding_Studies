@@ -2,7 +2,7 @@
 import { criarItemDaLista } from "./scripts/criarItemDaLista.js";
 import verificarListaVazia from "./scripts/verificarListaVazia.js";
 
-// Variáveis de acesso aos dados da página
+// Variáveis de acesso aos dados da página HTML
 const listaDeCompras = document.getElementById("lista-de-compras");
 const botaoAdicionar = document.getElementById("adicionar-item");
 
