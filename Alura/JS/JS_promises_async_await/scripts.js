@@ -36,7 +36,7 @@ inputUpload.addEventListener("change", async (evento) => {
             imagemPrincipal.src = conteudoDoArquivo.url;
             nomeDaImagem.textContent = conteudoDoArquivo.nome;
         } catch (erro) {
-            console.error("Erro na leitura do aruivo");
+            console.error("Erro na leitura do arquivo");
         }
     }
 });
