@@ -164,7 +164,7 @@ textarea {
 .botao-publicar {
     background-color: var(--primary-color);
     color: var(--items-background);
-    border: 1px solid var(--items-background);
+    border: none;
     position: relative;
 }
 
@@ -181,3 +181,4 @@ textarea {
     transform: translateY(-50%);
     margin-left: 8px;
 }
+
