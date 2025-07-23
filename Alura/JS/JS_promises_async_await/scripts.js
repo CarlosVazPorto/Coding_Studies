@@ -41,7 +41,7 @@ inputUpload.addEventListener("change", async (evento) => {
     }
 });
 
-// Implementação da funcionalidade de geração de tags HTML
+// Implementação da funcionalidade de geração de tags
 const inputTags = document.getElementById("input-tags");
 const listaTags = document.getElementById("lista-tags");
 
@@ -56,5 +56,13 @@ inputTags.addEventListener("keypress", (evento) => {
             listaTags.appendChild(tagNova);
             inputTags.value = "";
         }
+    }
+})
+
+// Implementação da funcionalidade de remoção de tags
+listaTags.addEventListener("click", (evento) => {
+    if (evento.target.classList.contains("remove-tag")) {
+        const tagARemover = evento.target.parentElement;
+        listaTags.removeChild(tagARemover);
     }
 })
