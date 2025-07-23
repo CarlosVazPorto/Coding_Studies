@@ -66,3 +66,15 @@ listaTags.addEventListener("click", (evento) => {
         listaTags.removeChild(tagARemover);
     }
 })
+
+// Implementação da funcionalidade de definição das tags permitidas
+const tagsDisponiveis = ["Front-end", "Programação", "Back-end", "Full-stack", "Ciência de Dados", "Mobile", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Angular", "Node.js"];
+
+async function verificarTagsDisponiveis(tagTexto) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(tagsDisponiveis.includes(tagTexto));
+        }, 1000)
+    })
+}
+
