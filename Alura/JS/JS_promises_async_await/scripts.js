@@ -41,25 +41,11 @@ inputUpload.addEventListener("change", async (evento) => {
     }
 });
 
-// Implementação da funcionalidade de geração de tags
+// Acesso ao conteúdo no input e output das tags
 const inputTags = document.getElementById("input-tags");
 const listaTags = document.getElementById("lista-tags");
 
-inputTags.addEventListener("keypress", (evento) => {
-    if (evento.key === "Enter") {
-        evento.preventDefault();
-        
-        const tagTexto = inputTags.value.trim();
-        if (tagTexto !== "") {
-            const tagNova = document.createElement("li");
-            tagNova.innerHTML = `<p>${tagTexto}</p> <img src="./img/close-black.svg" class="remove-tag">`;
-            listaTags.appendChild(tagNova);
-            inputTags.value = "";
-        }
-    }
-})
-
-// Implementação da funcionalidade de remoção de tags
+// Funcionalidade de remoção de tags
 listaTags.addEventListener("click", (evento) => {
     if (evento.target.classList.contains("remove-tag")) {
         const tagARemover = evento.target.parentElement;
@@ -67,9 +53,10 @@ listaTags.addEventListener("click", (evento) => {
     }
 })
 
-// Implementação da funcionalidade de definição das tags permitidas
+// Lista contendo as tags permitidas
 const tagsDisponiveis = ["Front-end", "Programação", "Back-end", "Full-stack", "Ciência de Dados", "Mobile", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Angular", "Node.js"];
 
+// Funcionalidade de verificação das tags permitidas
 async function verificarTagsDisponiveis(tagTexto) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -78,3 +65,27 @@ async function verificarTagsDisponiveis(tagTexto) {
     })
 }
 
+// Funcionalidade de geração de tags
+inputTags.addEventListener("keypress", async (evento) => {
+    if (evento.key === "Enter") {
+        evento.preventDefault();
+        
+        const tagTexto = inputTags.value.trim();
+        if (tagTexto !== "") {
+            try {
+                const tagNaLista = await verificarTagsDisponiveis(tagTexto);
+                if (tagNaLista) {
+                    const tagNova = document.createElement("li");
+                    tagNova.innerHTML = `<p>${tagTexto}</p> <img src="./img/close-black.svg" class="remove-tag">`;
+                    listaTags.appendChild(tagNova);
+                    inputTags.value = "";
+                } else {
+                    alert("A tag não foi encontrada na lista de tags permitidas.")
+                }
+            } catch (error) {
+                console.error("Erro ao verificar a existência da tag.");
+                alert("Erro ao verificar a existência da tag. Verifique o console.");
+            }
+        }
+    }
+})
