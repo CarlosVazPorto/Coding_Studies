@@ -80,7 +80,7 @@ inputTags.addEventListener("keypress", async (evento) => {
                     listaTags.appendChild(tagNova);
                     inputTags.value = "";
                 } else {
-                    alert("A tag não foi encontrada na lista de tags permitidas.")
+                    alert("A tag não foi encontrada na lista de tags permitidas.");
                 }
             } catch (error) {
                 console.error("Erro ao verificar a existência da tag.");
@@ -88,4 +88,19 @@ inputTags.addEventListener("keypress", async (evento) => {
             }
         }
     }
+})
+
+// Funcionalidade de acesso aos inputs do formulário (botão 'Publicar')
+const botaoPublicar = document.querySelector(".botao-publicar");
+
+botaoPublicar.addEventListener("click", async (evento) => {
+    evento.preventDefault();
+
+    const nomeDoProjeto = document.getElementById("nome").value;
+    const descricaoDoProjeto = document.getElementById("descricao").value;
+    const tagsProjeto = Array.from(listaTags.querySelector("p")).map((tag) => tag.textContent);
+
+    console.log(nomeDoProjeto);
+    console.log(descricaoDoProjeto);
+    console.log(tagsProjeto);
 })
