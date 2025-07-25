@@ -93,7 +93,7 @@ inputTags.addEventListener("keypress", async (evento) => {
 // Acesso ao botão publicar no HTML
 const botaoPublicar = document.querySelector(".botao-publicar");
 
-// Funcionalidade de simulação de envio de dados para um BD
+// Simulação de envio de dados para um BD
 async function publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -124,4 +124,19 @@ botaoPublicar.addEventListener("click", async (evento) => {
         console.log("Erro ao publicar: ", error);
         alert("Erro ao publicar...");
     }
+})
+
+// Funcionalidade do botão 'Descartar'
+const botaoDescartar = document.querySelector(".botao-descartar");
+
+botaoDescartar.addEventListener("click", (evento) => {
+    evento.preventDefault();
+
+    const formulario = document.querySelector("form");
+    formulario.reset();
+
+    imagemPrincipal.src = "./img/imagem1.png";
+    nomeDaImagem.textContent = "image-projeto.png";
+
+    listaTags.innerHTML = "";
 })
