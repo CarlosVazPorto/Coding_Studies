@@ -113,6 +113,7 @@ textarea {
 
 .lista-tags {
     display: flex;
+    flex-wrap: wrap;    
 }
 
 .lista-tags li {
@@ -122,6 +123,7 @@ textarea {
     gap: 10px;
     padding: 4px 8px;
     border-radius: 4px;
+    margin: 0 5px 5px 0;    
 }
 
 .container-botoes {
@@ -234,4 +236,3 @@ textarea {
     color: var(--secondary-color);
     font-size: 15px;
 }
-
