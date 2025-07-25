@@ -90,20 +90,8 @@ inputTags.addEventListener("keypress", async (evento) => {
     }
 })
 
-// Funcionalidade de acesso aos inputs do formulário (botão 'Publicar')
+// Acesso ao botão publicar no HTML
 const botaoPublicar = document.querySelector(".botao-publicar");
-
-botaoPublicar.addEventListener("click", async (evento) => {
-    evento.preventDefault();
-
-    const nomeDoProjeto = document.getElementById("nome").value;
-    const descricaoDoProjeto = document.getElementById("descricao").value;
-    const tagsProjeto = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
-
-    console.log(nomeDoProjeto);
-    console.log(descricaoDoProjeto);
-    console.log(tagsProjeto);
-})
 
 // Funcionalidade de simulação de envio de dados para um BD
 async function publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto) {
@@ -119,3 +107,21 @@ async function publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto) {
         }, 2000)
     })
 }
+
+// Funcionalidade de acesso aos inputs do formulário (botão 'Publicar')
+botaoPublicar.addEventListener("click", async (evento) => {
+    evento.preventDefault();
+
+    const nomeDoProjeto = document.getElementById("nome").value;
+    const descricaoDoProjeto = document.getElementById("descricao").value;
+    const tagsProjeto = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
+
+    try {
+        const resultado = await publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto);
+        console.log(resultado);
+        alert("Publicado com sucesso!");
+    } catch (error) {
+        console.log("Erro ao publicar: ", error);
+        alert("Erro ao publicar...");
+    }
+})
