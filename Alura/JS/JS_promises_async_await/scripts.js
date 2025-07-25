@@ -98,7 +98,7 @@ botaoPublicar.addEventListener("click", async (evento) => {
 
     const nomeDoProjeto = document.getElementById("nome").value;
     const descricaoDoProjeto = document.getElementById("descricao").value;
-    const tagsProjeto = Array.from(listaTags.querySelector("p")).map((tag) => tag.textContent);
+    const tagsProjeto = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
 
     console.log(nomeDoProjeto);
     console.log(descricaoDoProjeto);
