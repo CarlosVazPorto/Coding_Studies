@@ -24,7 +24,7 @@ function exibirOsLivrosNaTela(listaDeLivros) {
                         ${livro.autor}
                     </p>
                     <p class="livro__preco" id="preco">
-                        R$${livro.preco}.
+                        R$${livro.preco}
                     </p>
                 <div class="tags">
                     <span class="tag">
