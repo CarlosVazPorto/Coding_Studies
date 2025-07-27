@@ -28,5 +28,4 @@ As técnicas e tecnologias utilizadas pra isso são:
 
 ## 📁 Acesso ao projeto
 
-Você pode visitar o resultado do projeto [aqui]().
-
+Você pode visitar o resultado do projeto [aqui](#).
