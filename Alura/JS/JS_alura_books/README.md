@@ -12,6 +12,7 @@ A página tem como funcionalidades:
 - busca dos dados dos livros de um banco de dados através de API
 - exibição dos dados recebidos dos livros na página através do método forEach()
 - cálculo de descontos para cada livro através do método map()
+- filtragem de livros por categoria através do método filter()
 - (em construção) ...
 
 ## ✔️ Técnicas e tecnologias utilizadas
