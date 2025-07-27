@@ -7,7 +7,7 @@ Página da Alura Books com diversas funcionalidades geradas por métodos JavaScr
 
 ## 🔨 Funcionalidades do projeto
 
-A página tem como uncionalidades:
+A página tem como funcionalidades:
 
 - busca dos dados dos livros de um banco de dados através de API
 - exibição dos dados recebidos dos livros na página através do método forEach()
