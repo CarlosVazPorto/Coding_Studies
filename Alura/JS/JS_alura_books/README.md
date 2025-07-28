@@ -13,7 +13,9 @@ A página tem como funcionalidades:
 - exibição dos dados recebidos dos livros na página através do método forEach()
 - cálculo de descontos para cada livro através do método map()
 - filtragem de livros por categoria através do método filter()
-- (em construção) ...
+- ordenação dos livros por preço através do método sort()
+- verificação da disponibilidade do livro através do método forEach()
+- exibição somente dos livros disponíveis através do método filter()
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
