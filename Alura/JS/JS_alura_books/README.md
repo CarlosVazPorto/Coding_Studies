@@ -16,6 +16,7 @@ A página tem como funcionalidades:
 - ordenação dos livros por preço através do método sort()
 - verificação da disponibilidade do livro através do método forEach()
 - exibição somente dos livros disponíveis através do método filter()
+- exibição do valor total dos livros disponíveis através dos métodos reduce() e filter()
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
