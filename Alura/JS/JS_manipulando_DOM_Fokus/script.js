@@ -7,19 +7,19 @@ const banner = document.querySelector(".app__image");
 
 // Trocas de cor de fundo e imagem secundárias a evento nos botões
 focoBt.addEventListener("click", () => {
-    html.setAttribute("data-contexto", "foco");
-    banner.setAttribute("src", "/imagens/foco.png");
-    banner.setAttribute("alt", "Foco");
+    alterarContexto("foco");
 })
 
 curtoBt.addEventListener("click", () => {
-    html.setAttribute("data-contexto", "descanso-curto");
-    banner.setAttribute("src", "/imagens/descanso-curto.png");
-    banner.setAttribute("alt", "Descanso curto");    
+    alterarContexto("descanso-curto");  
 })
 
 longoBt.addEventListener("click", () => {
-    html.setAttribute("data-contexto", "descanso-longo");
-    banner.setAttribute("src", "/imagens/descanso-longo.png");
-    banner.setAttribute("alt", "Descanso longo");
+    alterarContexto("descanso-longo");
 })
+
+function alterarContexto(contexto) {
+    html.setAttribute("data-contexto", contexto);
+    banner.setAttribute("src", `/imagens/${contexto}.png`);
+    banner.setAttribute("alt", contexto);
+}
