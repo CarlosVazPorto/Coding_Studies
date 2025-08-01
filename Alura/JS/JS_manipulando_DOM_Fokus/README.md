@@ -1,5 +1,5 @@
 
-![Banner](https://github.com/CarlosVazPorto/Coding/new/main/Alura/JS/JS_manipulando_DOM_Fokus/imagens/Front-end-JavaScript_ manipulando elementos do DOM.png)
+<img width="2250" height="1125" alt="Front-end-JavaScript_ manipulando elementos do DOM" src="https://github.com/user-attachments/assets/316dda66-f726-4ffe-b2d9-dcf69a1ca061" />
 
 # JavaScript: manipulando elementos do DOM
 
