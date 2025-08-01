@@ -8,6 +8,7 @@
 ## 🔨 Funcionalidades do projeto
 
 > O app apresenta um temporizador com contagem regressiva de tempos variados, conforme a funcionalidade selecionada.
+<br>
 > São 25 minutos para a atividade de foco, 5 minutos para o descanso curto e 15 minutos para o descanso longo.
 
 ## ✔️ Técnicas e tecnologias utilizadas
