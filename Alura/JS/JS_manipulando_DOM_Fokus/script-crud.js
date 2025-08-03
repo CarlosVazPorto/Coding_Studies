@@ -1,0 +1,22 @@
+// Encontrar o botão 'Adicionar nova tarefa'
+
+const btnAdicionarTarefa = document.querySelector(".app__button--add-task");
+const formAdicionarTarefa = document.querySelector(".app__form-add-task");
+const formTextarea = document.querySelector(".app__form-textarea");
+
+const tarefas = [];
+
+btnAdicionarTarefa.addEventListener("click", () => {
+    formAdicionarTarefa.classList.toggle("hidden");
+})
+
+formAdicionarTarefa.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+    const tarefa = {
+        descricao: formTextarea.value,
+    }
+
+    tarefas.push(tarefa);
+    localStorage.setItem("tarefas", tarefas);
+})
