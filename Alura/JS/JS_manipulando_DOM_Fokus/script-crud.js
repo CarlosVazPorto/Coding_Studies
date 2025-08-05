@@ -28,10 +28,10 @@ function criarElementoTarefa (tarefa) {
     paragrafo.textContent = tarefa.descricao;
     paragrafo.classList.add("app__section-task-list-item-description");
 
-    const botao = document.createElement("button");
-    botao.classList.add("app_button-edit");
+    const botaoEditar = document.createElement("button");
+    botaoEditar.classList.add("app_button-edit");
 
-    botao.onclick = () => {
+    botaoEditar.onclick = () => {
         const novaDescricao = prompt("Qual é o novo nome da tarefa?");
         if (novaDescricao) {
             paragrafo.textContent = novaDescricao;
@@ -40,14 +40,14 @@ function criarElementoTarefa (tarefa) {
         }
     }
     
-    const imagemBotao = document.createElement("img");
-    imagemBotao.setAttribute("src", "/imagens/edit.png");
+    const imagemBotaoEditar = document.createElement("img");
+    imagemBotaoEditar.setAttribute("src", "/imagens/edit.png");
 
-    botao.append(imagemBotao);
+    botaoEditar.append(imagemBotaoEditar);
 
     li.append(svg);
     li.append(paragrafo);
-    li.append(botao);
+    li.append(botaoEditar);
 
     return li;
 }
