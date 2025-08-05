@@ -20,8 +20,8 @@ function criarElementoTarefa (tarefa) {
     `;
 
     const paragrafo = document.createElement("p");
-    paragrafo.classList.add("app__section-task-list-item-description");
     paragrafo.textContent = tarefa.descricao;
+    paragrafo.classList.add("app__section-task-list-item-description");
 
     const botao = document.createElement("button");
     botao.classList.add("app_button-edit");
@@ -50,7 +50,11 @@ formAdicionarTarefa.addEventListener("submit", (evento) => {
     };
 
     tarefas.push(tarefa);
+    const elementoTarefa = criarElementoTarefa(tarefa);
+    ulTarefas.append(elementoTarefa);
     localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    formTextarea.value = "";
+    formAdicionarTarefa.classList.add("hidden");
 })
 
 tarefas.forEach(tarefa => {
