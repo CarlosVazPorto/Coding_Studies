@@ -11,8 +11,7 @@ function criarElementoTarefa (tarefa) {
     const li = document.createElement("li");
     li.classList.add("app__section-task-list-item");
 
-    const svgNS = "http://www.w3.org/2000/svg" // Sintaxe sugerida pelo ChatGPT
-    const svg = document.createElementNS(svgNS, "svg");
+    const svg = document.createElement("svg");
     svg.innerHTML = `
         <svg class="app__section-task-icon-status" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="12" fill="#FFF"></circle>
