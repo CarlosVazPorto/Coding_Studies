@@ -32,7 +32,9 @@ function criarElementoTarefa (tarefa) {
     botaoEditar.classList.add("app_button-edit");
 
     botaoEditar.onclick = () => {
+        // debugger;
         const novaDescricao = prompt("Qual é o novo nome da tarefa?");
+        // console.log("Nova descrição da tarefa: ", novaDescricao);
         if (novaDescricao) {
             paragrafo.textContent = novaDescricao;
             tarefa.descricao = novaDescricao;
