@@ -8,6 +8,7 @@ const btnCancelarTarefa = document.querySelector(".app__form-footer__button--can
 const paragrafoDescricaoTarefa = document.querySelector(".app__section-active-task-description");
 
 const tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+
 let tarefaSelecionada = null;
 let liTarefaSelecionada = null;
 
