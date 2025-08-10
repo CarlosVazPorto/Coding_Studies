@@ -110,7 +110,6 @@ btnCancelarTarefa.addEventListener("click", limparFormulario);
 
 document.addEventListener("FocoFinalizado", () => {
     if (tarefaSelecionada && liTarefaSelecionada) {
-        debugger;
         liTarefaSelecionada.classList.remove("app__section-task-list-item-active");
         liTarefaSelecionada.classList.add("app__section-task-list-item-complete");
         liTarefaSelecionada.querySelector("button").setAttribute("disabled", true);
