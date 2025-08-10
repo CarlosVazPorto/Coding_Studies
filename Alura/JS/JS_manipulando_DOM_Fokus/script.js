@@ -20,7 +20,7 @@ const audioPlay = new Audio("/sons/play.wav");
 const audioPausa = new Audio("/sons/pause.mp3");
 
 // Variáveis de contagem de tempo
-let tempoDecorridoEmSegundos = 1500;
+let tempoDecorridoEmSegundos = 5; // 1500
 let intervaloId = null;
 
 // Evento para ligar / desligar a música
@@ -93,7 +93,7 @@ const contagemRegressiva = () => {
     if (tempoDecorridoEmSegundos <= 0){
         audioTempoFinalizado.play();
         alert("Tempo finalizado!");
-        const focoAtivo = html.getAttribute("data-contxto") == "foco";
+        const focoAtivo = html.getAttribute("data-contexto") == "foco";
         if (focoAtivo) {
             const eventoFocoFinalizado = new CustomEvent("FocoFinalizado");
             document.dispatchEvent(eventoFocoFinalizado);
