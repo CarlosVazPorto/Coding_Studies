@@ -2,8 +2,10 @@
 
 
 # Projeto Fokus
-## JavaScript: manipulando elementos do DOM
-## JavaScript: explorando a manipulação de elementos e da localStorage
+
+> Dos cursos:
+> - JavaScript: manipulando elementos do DOM
+> - JavaScript: explorando a manipulação de elementos e da localStorage
 
 App temporizador Fokus, para auxiliar em atividades que exigem períodos de foco alternados com descanso.
 
