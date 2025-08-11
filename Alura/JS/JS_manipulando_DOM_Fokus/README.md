@@ -3,7 +3,7 @@
 
 # Projeto Fokus
 
-> Dos cursos:
+> Dos cursos da Alura:
 > - JavaScript: manipulando elementos do DOM
 > - JavaScript: explorando a manipulação de elementos e da localStorage
 
