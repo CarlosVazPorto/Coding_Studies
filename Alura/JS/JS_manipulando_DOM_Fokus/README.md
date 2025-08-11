@@ -1,7 +1,9 @@
 
-<img width="2250" height="1125" alt="Front-end-JavaScript_ manipulando elementos do DOM" src="https://github.com/user-attachments/assets/316dda66-f726-4ffe-b2d9-dcf69a1ca061" />
 
-# JavaScript: manipulando elementos do DOM
+
+# Projeto Fokus
+## JavaScript: manipulando elementos do DOM
+## JavaScript: explorando a manipulação de elementos e da localStorage
 
 App temporizador Fokus, para auxiliar em atividades que exigem períodos de foco alternados com descanso.
 
@@ -10,6 +12,8 @@ App temporizador Fokus, para auxiliar em atividades que exigem períodos de foco
 O app apresenta um temporizador com contagem regressiva de tempos variados, conforme a funcionalidade selecionada.
 <br>
 São 25 minutos para a atividade de foco, 5 minutos para o descanso curto e 15 minutos para o descanso longo.
+<br>
+O app permite a inserção e remoção de tarefas nas quais o usuário pretende focar.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
