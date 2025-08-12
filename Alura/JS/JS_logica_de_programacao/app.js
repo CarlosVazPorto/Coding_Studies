@@ -4,6 +4,7 @@ let numeroSecreto = 5;
 let chute;
 // console.log('Valor do chute: ' + chute);
 // console.log('Resultado da comparação: ', chute == numeroSecreto);
+let tentativas = 1;
 
 // Enquanto o chute não for igual ao número secreto
 while (chute != numeroSecreto) {
@@ -11,12 +12,13 @@ while (chute != numeroSecreto) {
     
     // Se o chute for igual ao número secreto
     if (chute == numeroSecreto) {
-        alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto}`);
+        alert(`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
     } else {
         if (chute > numeroSecreto) {
             alert(`O número secreto é menor do que ${chute}`);
         } else {
             alert(`O número secreto é maior do que ${chute}`);
         }
+        tentativas++;
     }
 }
