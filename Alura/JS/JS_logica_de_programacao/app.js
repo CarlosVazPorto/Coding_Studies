@@ -1,9 +1,7 @@
 alert('Boas vindas ao jogo do número secreto!');
 let numeroSecreto = parseInt(Math.random() * 100 + 1);
-// console.log('Número secreto: ' + numeroSecreto);
+
 let chute;
-// console.log('Valor do chute: ' + chute);
-// console.log('Resultado da comparação: ', chute == numeroSecreto);
 let tentativas = 1;
 
 // Enquanto o chute não for igual ao número secreto
