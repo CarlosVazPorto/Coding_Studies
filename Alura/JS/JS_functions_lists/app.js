@@ -25,9 +25,22 @@ function verificarChute() {
         }
 
         tentativas++;
+
+        limparCampo();
+        focarNoChute();
     }
 }
 
 function gerarNumeroAleatorio() {
     return parseInt(Math.random() * 10 + 1);
+}
+
+function limparCampo() {
+    chute = document.querySelector("input");
+    chute.value = "";
+}
+
+function focarNoChute() {
+    let campoChute = document.querySelector(".container__input");
+    campoChute.focus();
 }
