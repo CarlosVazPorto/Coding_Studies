@@ -16,6 +16,18 @@
     row-gap: 0.5rem;
 }
 
+/* Destaques */
+
+.destaques {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
 @media (min-width: 720px) {
     
     /* Cabeçalho */
@@ -37,7 +49,7 @@
 @media (min-width: 1440px) {
 
     /* Cabeçalho */
-    
+
     .menu {
         column-gap: 105px;
         flex-wrap: nowrap;
