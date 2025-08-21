@@ -7,3 +7,16 @@
     position: fixed;
     top: 0;
 }
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+/* Media  */
+
+@media (min-width: 834px) {
+
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+}
