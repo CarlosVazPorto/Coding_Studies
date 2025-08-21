@@ -1,1 +1,5 @@
+/* Caebeçalho */
 
+.cabecalho__container {
+    display: flex;
+}
