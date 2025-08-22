@@ -12,6 +12,13 @@
     display: none;
 }
 
+/* Rodapé */
+
+.rodape__container {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Media  */
 
 @media (min-width: 834px) {
