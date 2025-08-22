@@ -16,15 +16,21 @@
 
 .rodape__container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
 }
 
 /* Media  */
 
 @media (min-width: 834px) {
 
+    /* Cabeçalho */
+
     .cabecalho__pesquisar__item {
         display: block;
+    }
+
+    /* Rodapé */
+    .rodape__container {
+        justify-content: space-between;
     }
 }
