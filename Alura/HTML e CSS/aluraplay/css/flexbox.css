@@ -70,6 +70,22 @@
         display: block;
     }
 
+    /* Menu */
+
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 80px;
+        top: 80px;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+
     /* Rodapé */
     .rodape__container {
         justify-content: space-between;
