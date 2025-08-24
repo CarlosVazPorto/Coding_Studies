@@ -60,7 +60,7 @@
     flex-flow: column wrap;
 }
 
-/* Media  */
+/* Media 834px+ */
 
 @media (min-width: 834px) {
 
@@ -90,4 +90,28 @@
     .rodape__container {
         justify-content: space-between;
     }
+}
+
+/* Media 1440px+ */
+
+@media (min-width: 1440px) {
+
+    /* Menu */    
+
+    .menu__container {
+        width: 240px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+    }
+
 }
