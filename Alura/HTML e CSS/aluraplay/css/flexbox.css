@@ -12,6 +12,15 @@
     display: none;
 }
 
+/* Menu  */
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 74px;
+    width: 100%;
+}
+
 /* Seção superior */
 
 .superior__secao__container {
