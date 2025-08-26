@@ -1,4 +1,4 @@
-![Banner](./)
+![Banner](./img/Front-end-Aluraplay.png)
 
 # Aluraplay
 
