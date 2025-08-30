@@ -1,15 +1,11 @@
 function tocaSom (seletorAudio) {
     
     const elemento = document.querySelector(seletorAudio);
-
-    if (elemento === null) {
-        conseole.console.log('Elemento não encontrado');
-    } 
     
-    if (elemento != null) {
-        if (elemento.localName === 'audio') {
-                elemento.play();    
-        }
+    if (elemento && elemento.localName === 'audio') {
+        elemento.play();
+    } else {
+        conseole.console.log('Elemento não encontrado ou seletor inválido!');
     }
 }
 
