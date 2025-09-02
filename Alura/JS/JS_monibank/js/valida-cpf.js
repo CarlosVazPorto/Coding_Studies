@@ -62,5 +62,5 @@ function validaSegundoDigito (cpf) {
     }
 
     return soma != cpf[10];
-
+    
 }
