@@ -3,7 +3,6 @@ export default function ehMaiorDeIdade(campo) {
 
     validaIdade(dataNascimento);
 
-    console.log(validaIdade(dataNascimento));
 }
 
 function validaIdade(data) {
