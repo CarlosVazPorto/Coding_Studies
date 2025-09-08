@@ -22,7 +22,7 @@ const api = {
             return await response.json();
         } 
         catch {
-            alert('Erro ao buscar pensamentos');
+            alert('Erro ao salvar o pensamento');
             throw error;
         }
     }
