@@ -39,7 +39,7 @@ const ui = {
         
         listaPensamentos.appendChild(li);
 
-    }
+    },
 
     limparFormulario() {
         document.getElementById("pensamento-form").reset();
