@@ -41,6 +41,10 @@ const ui = {
 
     }
 
+    limparFormulario() {
+        document.getElementById("pensamento-form").reset();
+    }
+
 }
 
 export default ui;
