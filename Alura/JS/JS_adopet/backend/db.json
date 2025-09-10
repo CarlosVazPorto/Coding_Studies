@@ -59,6 +59,18 @@
       "especie": "canina",
       "nome": "Charlie",
       "raca": "Golden Retriever"
+    },
+    {
+      "id": "9d47",
+      "nome": "Stella",
+      "especie": "canina",
+      "raca": "Shih Tzu"
+    },
+    {
+      "id": "0fc7",
+      "nome": "Merlin",
+      "especie": "felina",
+      "raca": "Persa"
     }
   ]
 }
