@@ -1,6 +1,14 @@
 import api from "./api.js"
 
 const ui = {
+    
+    async preencherFormulario(pensamentoId) {
+        const pensamento = await api.buscarPensamentoPorId(pensamentoId);
+        document.getElementById("pensamento-id").value = pensamento.id;
+        document.getElementById("pensamento-conteudo").value = pensamento.conteudo;
+        document.getElementById("pensamento-autoria").value = pensamento.autoria;
+    },
+    
     async renderizarPensamentos() {
         const listaPensamentos = document.getElementById('lista-pensamentos');
 
