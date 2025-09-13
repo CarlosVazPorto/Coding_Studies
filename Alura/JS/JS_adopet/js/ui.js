@@ -45,9 +45,15 @@ const ui = {
         racaPet.textContent = `Raça: ${pet.raca}`;
         racaPet.classList.add("pet-raca");
 
+        const botaoEditar = document.createElement("button");
+        botaoEditar.classList.add("botao-editar");
+        botaoEditar.textContent = "Editar";
+        botaoEditar.onclick = () => ui.preencherFormulario(pet.id);
+
         li.appendChild(nomePet);
         li.appendChild(especiePet);
         li.appendChild(racaPet);
+        li.appendChild(botaoEditar);
 
         listaPets.appendChild(li);
 
