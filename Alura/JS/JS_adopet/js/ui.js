@@ -3,8 +3,14 @@ import api from "./api.js"
 const ui = {
 
     async preencherFormulario(petId) {
-        
-    }
+        const pet = await api.buscarPetPorId(petId);
+
+        document.getElementById("pet-id").value = pet.id;
+        document.getElementById("pet-nome").value = pet.nome;
+        document.getElementById("pet-especie").value = pet.especie;
+        document.getElementById("pet-raca").value = pet.raca;
+
+    },
 
     async renderizarPets() {
         const listaPets = document.getElementById("lista-pets");
