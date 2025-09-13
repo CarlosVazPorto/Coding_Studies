@@ -1,6 +1,11 @@
 import api from "./api.js"
 
 const ui = {
+
+    async preencherFormulario(petId) {
+        
+    }
+
     async renderizarPets() {
         const listaPets = document.getElementById("lista-pets");
         listaPets.innerHTML = "";
