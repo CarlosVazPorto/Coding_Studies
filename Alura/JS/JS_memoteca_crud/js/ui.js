@@ -17,6 +17,7 @@ const ui = {
         try {
             const pensamentos = await api.buscarPensamentos();
             //pensamentos.forEach(ui.adicionarPensamentoNaLista);
+            //Linha comentada pois gerava duplicidade na renderização da lista
 
             if (pensamentos.length === 0) {
                 mensagemVazia.style.display = "block";
