@@ -53,6 +53,18 @@ const api = {
             alert(`Erro: ${error.message}`);
             throw error;
         }
+    },
+
+    async deletarPet(id) {
+        try {
+            const response = await fetch(`http://localhost:3000/pets/${id}`, {
+                method: "DELETE"
+            });   
+        } catch (error) {
+            alert(`Erro: ${error.message}`);
+            throw error;
+        }
+        
     }
 
 };
