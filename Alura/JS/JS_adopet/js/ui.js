@@ -50,10 +50,24 @@ const ui = {
         botaoEditar.textContent = "Editar";
         botaoEditar.onclick = () => ui.preencherFormulario(pet.id);
 
+        const botaoExcluir = document.createElement("button");
+        botaoExcluir.classList.add("botao-excluir");
+        botaoExcluir.textContent = "Excluir";
+        botaoExcluir.onclick = async () => {
+            try {
+                await api.deletarPet(pet.id);
+                ui.renderizarPets();
+            } catch (error) {
+                console.error("Erro ao excluir pet: ", error);
+                alert("Erro ao excluir pet. Tente novamente mais tarde.");
+            }
+        }
+
         li.appendChild(nomePet);
         li.appendChild(especiePet);
         li.appendChild(racaPet);
         li.appendChild(botaoEditar);
+        li.appendChild(botaoExcluir);
 
         listaPets.appendChild(li);
 
