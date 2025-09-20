@@ -62,7 +62,7 @@ const api = {
       const filmesFiltrados = filmes.filter(filme => {
         return filme.nome.toLowerCase().includes(termoEmMinusculas) ||
                filme.genero.toLowerCase().includes(termoEmMinusculas);
-      })
+      });
       
       return filmesFiltrados;
 
