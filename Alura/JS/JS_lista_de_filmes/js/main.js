@@ -32,3 +32,15 @@ async function manipularSubmissaoFormulario(event) {
 function manipularCancelamento() {
   ui.limparFormulario()
 }
+
+async function manipularBusca() {
+  const termoBusca = document.getElementById("campo-busca").value;
+
+  try {
+    const filmesFiltrados = await api.buscarFilmesPorTermo(termoBusca);
+    ui.renderizarFilmes(filmesFiltrados);
+  } catch (error) {
+    alert("Erro ao realizar busca.");
+    throw error;
+  }
+}
