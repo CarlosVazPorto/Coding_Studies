@@ -2,35 +2,38 @@ import ui from "./ui.js"
 import api from "./api.js"
 
 document.addEventListener("DOMContentLoaded", () => {
-  ui.renderizarFilmes()
+  ui.renderizarFilmes();
 
-  const formularioFilme = document.getElementById("filme-form")
-  const botaoCancelar = document.getElementById("botao-cancelar")
+  const formularioFilme = document.getElementById("filme-form");
+  const botaoCancelar = document.getElementById("botao-cancelar");
+  const inputBusca = document.getElementById("campo-busca");
 
-  formularioFilme.addEventListener("submit", manipularSubmissaoFormulario)
-  botaoCancelar.addEventListener("click", manipularCancelamento)
+  formularioFilme.addEventListener("submit", manipularSubmissaoFormulario);
+  botaoCancelar.addEventListener("click", manipularCancelamento);
+  inputBusca.addEventListener("input", manipularBusca);
+
 })
 
 async function manipularSubmissaoFormulario(event) {
-  event.preventDefault()
-  const id = document.getElementById("filme-id").value
-  const nome = document.getElementById("filme-nome").value
-  const genero = document.getElementById("filme-genero").value
+  event.preventDefault();
+  const id = document.getElementById("filme-id").value;
+  const nome = document.getElementById("filme-nome").value;
+  const genero = document.getElementById("filme-genero").value;
 
   try {
     if (id) {
-      await api.editarFilme({ id, nome, genero })
+      await api.editarFilme({ id, nome, genero });
     } else {
-      await api.salvarFilme({ nome, genero })
+      await api.salvarFilme({ nome, genero });
     }
-    ui.renderizarFilmes()
+    ui.renderizarFilmes();
   } catch {
-    alert("Erro ao salvar filme")
+    alert("Erro ao salvar filme");
   }
 }
 
 function manipularCancelamento() {
-  ui.limparFormulario()
+  ui.limparFormulario();
 }
 
 async function manipularBusca() {
