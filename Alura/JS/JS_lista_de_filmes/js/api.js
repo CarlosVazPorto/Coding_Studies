@@ -53,7 +53,25 @@ const api = {
       alert('Erro ao excluir um filme')
       throw error
     }
+  },
+
+  async buscarFilmesPorTermo(termo) {
+    try {
+      const filmes = await this.buscarFilmes();
+      const termoEmMinusculas = termo.toLowerCase();
+      const filmesFiltrados = filmes.filter(filme => {
+        return filme.nome.toLowerCase().includes(termoEmMinusculas) ||
+               filme.genero.toLowerCase().includes(termoEmMinusculas);
+      })
+      
+      return filmesFiltrados;
+
+    } catch (error) {
+      alert("Erro ao filtrar filmes");
+      throw error;
+    }
   }
+
 }
 
 export default api
