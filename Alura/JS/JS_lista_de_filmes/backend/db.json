@@ -24,6 +24,131 @@
       "id": "1005",
       "nome": "Alien: Romulus",
       "genero": "Ficção Científica"
+    },
+    {
+      "id": "1006",
+      "nome": "Clube da Luta",
+      "genero": "Drama"
+    },
+    {
+      "id": "1007",
+      "nome": "A Origem",
+      "genero": "Ficção Científica"
+    },
+    {
+      "id": "1008",
+      "nome": "O Senhor dos Anéis: A Sociedade do Anel",
+      "genero": "Fantasia"
+    },
+    {
+      "id": "1009",
+      "nome": "O Senhor dos Anéis: As Duas Torres",
+      "genero": "Fantasia"
+    },
+    {
+      "id": "1010",
+      "nome": "O Senhor dos Anéis: O Retorno do Rei",
+      "genero": "Fantasia"
+    },
+    {
+      "id": "1011",
+      "nome": "Gladiador",
+      "genero": "Ação"
+    },
+    {
+      "id": "1012",
+      "nome": "O Poderoso Chefão",
+      "genero": "Drama"
+    },
+    {
+      "id": "1013",
+      "nome": "O Poderoso Chefão: Parte II",
+      "genero": "Drama"
+    },
+    {
+      "id": "1014",
+      "nome": "O Poderoso Chefão: Parte III",
+      "genero": "Drama"
+    },
+    {
+      "id": "1015",
+      "nome": "Pulp Fiction: Tempo de Violência",
+      "genero": "Crime"
+    },
+    {
+      "id": "1016",
+      "nome": "Coringa",
+      "genero": "Drama"
+    },
+    {
+      "id": "1017",
+      "nome": "O Silêncio dos Inocentes",
+      "genero": "Suspense"
+    },
+    {
+      "id": "1018",
+      "nome": "Interestelar",
+      "genero": "Ficção Científica"
+    },
+    {
+      "id": "1019",
+      "nome": "A Lista de Schindler",
+      "genero": "Drama"
+    },
+    {
+      "id": "1020",
+      "nome": "Os Infiltrados",
+      "genero": "Crime"
+    },
+    {
+      "id": "1021",
+      "nome": "O Resgate do Soldado Ryan",
+      "genero": "Guerra"
+    },
+    {
+      "id": "1022",
+      "nome": "Cidadão Kane",
+      "genero": "Drama"
+    },
+    {
+      "id": "1023",
+      "nome": "Blade Runner: O Caçador de Andróides",
+      "genero": "Ficção Científica"
+    },
+    {
+      "id": "1024",
+      "nome": "Os Sete Samurais",
+      "genero": "Aventura"
+    },
+    {
+      "id": "1025",
+      "nome": "Psicose",
+      "genero": "Terror"
+    },
+    {
+      "id": "1026",
+      "nome": "Parasita",
+      "genero": "Drama"
+    },
+    {
+      "id": "1027",
+      "nome": "Cidade de Deus",
+      "genero": "Crime"
+    },
+    {
+      "id": "1028",
+      "nome": "A Vida é Bela",
+      "genero": "Drama"
+    },
+    {
+      "id": "1029",
+      "nome": "O Grande Lebowski",
+      "genero": "Comédia"
+    },
+    {
+      "id": "1030",
+      "nome": "Mad Max: Estrada da Fúria",
+      "genero": "Ação"
     }
   ]
 }
