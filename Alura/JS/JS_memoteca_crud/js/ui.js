@@ -55,6 +55,13 @@ const ui = {
         pensamentoAutoria.textContent = pensamento.autoria;
         pensamentoAutoria.classList.add("pensamento-autoria");
 
+        const botaoFavorito = document.createElement("button");
+        botaoFavorito.classList.add("botao-favorito");
+
+        const iconeFavorito = document.createElement("img");
+        iconeFavorito.src = "assets/imagens/icone-favorito_outline.png";
+        iconeFavorito.alt = "Ícone de favorito";
+
         const botaoEditar = document.createElement("button");
         botaoEditar.classList.add("botao-editar");
         botaoEditar.onclick = () => ui.preencherFormulario(pensamento.id);
@@ -83,9 +90,11 @@ const ui = {
         const icones = document.createElement("div");
         icones.classList.add("icones");
 
+        botaoFavorito.appendChild(iconeFavorito);
         botaoEditar.appendChild(iconeEditar);
         botaoExcluir.appendChild(iconeExcluir);
 
+        icones.appendChild(botaoFavorito);
         icones.appendChild(botaoEditar);
         icones.appendChild(botaoExcluir);
 
