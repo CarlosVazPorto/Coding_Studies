@@ -48,9 +48,18 @@ const ui = {
 
     const botaoFavorito = document.createElement("button");
     botaoFavorito.classList.add("botao-favorito");
+    botaoFavorito.onclick = async () => {
+      try {
+        await api.atualizarFavorito(filme.id, !filme.favorito);
+        ui.renderizarFilmes();
+      } catch (error) {
+        alert("Erro ao atualizar favorito.");
+        throw error;
+      }
+    }
 
     const iconeFavorito = document.createElement("img");
-    iconeFavorito.src = favorito ? 
+    iconeFavorito.src = filme.favorito ? 
       "../assets/imagens/icone-favorito.png" :
       "../assets/imagens/icone-favorito_outline.png";
     iconeFavorito.alt = "Ícone de favorito.";
