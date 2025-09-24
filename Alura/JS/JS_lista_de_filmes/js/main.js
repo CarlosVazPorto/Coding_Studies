@@ -19,12 +19,13 @@ async function manipularSubmissaoFormulario(event) {
   const id = document.getElementById("filme-id").value;
   const nome = document.getElementById("filme-nome").value;
   const genero = document.getElementById("filme-genero").value;
+  const data = document.getElementById("data-lancamento").value;
 
   try {
     if (id) {
-      await api.editarFilme({ id, nome, genero });
+      await api.editarFilme({ id, nome, genero, data });
     } else {
-      await api.salvarFilme({ nome, genero });
+      await api.salvarFilme({ nome, genero, data });
     }
     ui.renderizarFilmes();
   } catch {
