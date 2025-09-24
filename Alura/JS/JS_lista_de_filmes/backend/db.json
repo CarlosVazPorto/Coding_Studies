@@ -3,152 +3,182 @@
     {
       "id": "1001",
       "nome": "O Iluminado",
-      "genero": "Terror"
+      "genero": "Terror",
+      "data": "23/05/1980"
     },
     {
       "id": "1002",
       "nome": "Forrest Gump: O Contador de Histórias",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "06/07/1994"
     },
     {
       "id": "1003",
       "nome": "Matrix",
-      "genero": "Ficção Científica"
+      "genero": "Ficção Científica",
+      "data": "31/03/1999"
     },
     {
       "id": "1004",
       "nome": "Batman: O Cavaleiro das Trevas",
-      "genero": "Ação"
+      "genero": "Ação",
+      "data": "18/07/2008"
     },
     {
       "id": "1005",
       "nome": "Alien: Romulus",
-      "genero": "Ficção Científica"
+      "genero": "Ficção Científica",
+      "data": "16/08/2024"
     },
     {
       "id": "1006",
       "nome": "Clube da Luta",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "15/10/1999"
     },
     {
       "id": "1007",
       "nome": "A Origem",
-      "genero": "Ficção Científica"
+      "genero": "Ficção Científica",
+      "data": "16/07/2010"
     },
     {
       "id": "1008",
       "nome": "O Senhor dos Anéis: A Sociedade do Anel",
-      "genero": "Fantasia"
+      "genero": "Fantasia",
+      "data": "19/12/2001"
     },
     {
       "id": "1009",
       "nome": "O Senhor dos Anéis: As Duas Torres",
-      "genero": "Fantasia"
+      "genero": "Fantasia",
+      "data": "18/12/2002"
     },
     {
       "id": "1010",
       "nome": "O Senhor dos Anéis: O Retorno do Rei",
-      "genero": "Fantasia"
+      "genero": "Fantasia",
+      "data": "17/12/2003"
     },
     {
       "id": "1011",
       "nome": "Gladiador",
-      "genero": "Ação"
+      "genero": "Ação",
+      "data": "05/05/2000"
     },
     {
       "id": "1012",
       "nome": "O Poderoso Chefão",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "15/03/1972"
     },
     {
       "id": "1013",
       "nome": "O Poderoso Chefão: Parte II",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "12/12/1974"
     },
     {
       "id": "1014",
       "nome": "O Poderoso Chefão: Parte III",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "25/12/1990"
     },
     {
       "id": "1015",
       "nome": "Pulp Fiction: Tempo de Violência",
-      "genero": "Crime"
+      "genero": "Crime",
+      "data": "14/10/1994"
     },
     {
       "id": "1016",
       "nome": "Coringa",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "04/10/2019"
     },
     {
       "id": "1017",
       "nome": "O Silêncio dos Inocentes",
-      "genero": "Suspense"
+      "genero": "Suspense",
+      "data": "14/02/1991"
     },
     {
       "id": "1018",
       "nome": "Interestelar",
-      "genero": "Ficção Científica"
+      "genero": "Ficção Científica",
+      "data": "05/11/2014"
     },
     {
       "id": "1019",
       "nome": "A Lista de Schindler",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "15/12/1993"
     },
     {
       "id": "1020",
       "nome": "Os Infiltrados",
-      "genero": "Crime"
+      "genero": "Crime",
+      "data": "06/10/2006"
     },
     {
       "id": "1021",
       "nome": "O Resgate do Soldado Ryan",
-      "genero": "Guerra"
+      "genero": "Guerra",
+      "data": "24/07/1998"
     },
     {
       "id": "1022",
       "nome": "Cidadão Kane",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "01/05/1941"
     },
     {
       "id": "1023",
       "nome": "Blade Runner: O Caçador de Andróides",
-      "genero": "Ficção Científica"
+      "genero": "Ficção Científica",
+      "data": "25/06/1982"
     },
     {
       "id": "1024",
       "nome": "Os Sete Samurais",
-      "genero": "Aventura"
+      "genero": "Aventura",
+      "data": "19/11/1956"
     },
     {
       "id": "1025",
       "nome": "Psicose",
-      "genero": "Terror"
+      "genero": "Terror",
+      "data": "16/06/1960"
     },
     {
       "id": "1026",
       "nome": "Parasita",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "11/10/2019"
     },
     {
       "id": "1027",
       "nome": "Cidade de Deus",
-      "genero": "Crime"
+      "genero": "Crime",
+      "data": "17/01/2003"
     },
     {
       "id": "1028",
       "nome": "A Vida é Bela",
-      "genero": "Drama"
+      "genero": "Drama",
+      "data": "23/10/1998"
     },
     {
       "id": "1029",
       "nome": "O Grande Lebowski",
-      "genero": "Comédia"
+      "genero": "Comédia",
+      "data": "06/03/1998"
     },
     {
       "id": "1030",
       "nome": "Mad Max: Estrada da Fúria",
-      "genero": "Ação"
+      "genero": "Ação",
+      "data": "15/05/2015"
     }
   ]
 }
