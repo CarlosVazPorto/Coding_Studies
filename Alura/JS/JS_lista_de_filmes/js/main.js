@@ -21,6 +21,11 @@ async function manipularSubmissaoFormulario(event) {
   const genero = document.getElementById("filme-genero").value;
   const data = document.getElementById("data-lancamento").value;
 
+  if (!validarData(data)) {
+    alert("Filme ainda não lançado!");
+    return;
+  }
+
   try {
     if (id) {
       await api.editarFilme({ id, nome, genero, data });
