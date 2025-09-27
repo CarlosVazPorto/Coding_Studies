@@ -1,4 +1,8 @@
 const url = "http://localhost:3000";
+const converterData = (dataString) => {
+  const [ano] = dataString.split("-");
+  return ano;
+}
 
 const api = {
   async buscarFilmes() {
