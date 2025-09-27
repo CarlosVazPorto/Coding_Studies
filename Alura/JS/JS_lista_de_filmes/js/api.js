@@ -8,7 +8,13 @@ const api = {
   async buscarFilmes() {
     try {
       const response = await axios.get(`${url}/filmes`);
-      return await response.data;
+      const filmes = await response.data;
+      return filmes.map(filme => {
+        return {
+          ...filme,
+          data: converterData(filme.data)
+        };
+      })
     }
     catch {
       alert('Erro ao buscar filmes');
