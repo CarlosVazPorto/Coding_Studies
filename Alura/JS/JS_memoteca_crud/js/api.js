@@ -42,7 +42,12 @@ const api = {
     async buscarPensamentoPorId(id) {
         try {
             const response = await axios.get(`${URL_BASE}/pensamentos/${id}`);
-            return await response.data;
+            const pensamento = await response.data;
+
+            return {
+                ...pensamento,
+                data: new Date(pensamento.data)
+            };
         } 
         catch {
             alert('Erro ao buscar pensamento');
