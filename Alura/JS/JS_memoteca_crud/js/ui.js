@@ -57,7 +57,14 @@ const ui = {
         pensamentoAutoria.classList.add("pensamento-autoria");
 
         const pensamentoData = document.createElement("div");
-        const dataFormatada = pensamento.data.toLocaleDateString("pt-br");
+        const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timezone: "UTC"
+        };
+        const dataFormatada = pensamento.data.toLocaleDateString("pt-br", options);
         pensamentoData.textContent = dataFormatada;
         pensamentoData.classList.add("pensamento-data");
 
