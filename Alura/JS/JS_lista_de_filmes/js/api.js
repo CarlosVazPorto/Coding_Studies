@@ -39,7 +39,12 @@ const api = {
   async buscarFilmePorId(id) {
     try {
       const response = await axios.get(`${url}/filmes/${id}`);
-      return await response.data;
+      const filme = await response.data;
+
+      return {
+        ...filme,
+        data: converterData(filme.data)
+      };
     }
     catch {
       alert('Erro ao buscar filme');
