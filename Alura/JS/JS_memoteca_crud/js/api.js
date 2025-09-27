@@ -9,7 +9,14 @@ const api = {
     async buscarPensamentos() {
         try {
             const response = await axios.get(`${URL_BASE}/pensamentos`);
-            return await response.data;
+            const pensamentos = await response.data;
+
+            return pensamentos.map(pensamento => {
+                return {
+                    ...pensamento,
+                    data: new Date(pensamento.data);
+                };
+            })
         } 
         catch {
             alert('Erro ao buscar pensamentos');
