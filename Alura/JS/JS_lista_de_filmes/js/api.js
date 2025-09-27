@@ -24,7 +24,10 @@ const api = {
 
   async salvarFilme(filme) {
     try {
-      const response = await axios.post(`${url}/filmes`, filme);
+      const response = await axios.post(`${url}/filmes`, {
+        ...filme,
+        data: converterData(filme.data)
+      });
       return await response.data;
     }
     catch {
