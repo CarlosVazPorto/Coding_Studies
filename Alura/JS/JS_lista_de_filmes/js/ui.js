@@ -7,6 +7,8 @@ const ui = {
     document.getElementById("filme-id").value = filme.id;
     document.getElementById("filme-nome").value = filme.nome;
     document.getElementById("filme-genero").value = filme.genero;
+    document.getElementById("filme-data").value = filme.data;
+
   },
 
   limparFormulario() {
@@ -45,6 +47,10 @@ const ui = {
     const filmeGenero = document.createElement("div");
     filmeGenero.textContent = filme.genero;
     filmeGenero.classList.add("filme-genero");
+    
+    const filmeData = document.createElement("div");
+    filmeData.textContent = filme.data;
+    filmeData.classList.add("filme-data");
 
     const botaoFavorito = document.createElement("button");
     botaoFavorito.classList.add("botao-favorito");
@@ -98,6 +104,7 @@ const ui = {
 
     li.appendChild(filmeNome);
     li.appendChild(filmeGenero);
+    li.appendChild(filmeData);
     li.appendChild(icones);
     listaFilmes.appendChild(li);
   }
