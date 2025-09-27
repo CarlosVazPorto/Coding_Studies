@@ -14,7 +14,7 @@ const api = {
             return pensamentos.map(pensamento => {
                 return {
                     ...pensamento,
-                    data: new Date(pensamento.data);
+                    data: new Date(pensamento.data)
                 };
             })
         } 
