@@ -8,6 +8,7 @@ const ui = {
         document.getElementById("pensamento-conteudo").value = pensamento.conteudo;
         document.getElementById("pensamento-autoria").value = pensamento.autoria;
         document.getElementById("pensamento-data").value = pensamento.data;
+        document.getElementById("form-container").scrollIntoView();
     },
     
     async renderizarPensamentos(pensamentosFiltrados = null) {

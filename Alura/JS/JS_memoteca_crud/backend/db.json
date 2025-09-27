@@ -9,7 +9,7 @@
     },
     {
       "id": "5b8a",
-      "favorito": false,
+      "favorito": true,
       "conteudo": "Na minha máquina funciona!",
       "autoria": "Dev",
       "data": "2025-01-05T14:22:10.000Z"
