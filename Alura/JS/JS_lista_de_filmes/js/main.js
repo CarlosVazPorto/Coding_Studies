@@ -1,6 +1,9 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
+const regexNome = /^[\p{L}0-9\s\p{P}]*$/u;
+const regexGenero = /^[\p{L}-\s]*$/u;
+
 document.addEventListener("DOMContentLoaded", () => {
   ui.renderizarFilmes();
 
