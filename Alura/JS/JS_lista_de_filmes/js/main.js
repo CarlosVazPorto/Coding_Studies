@@ -3,6 +3,20 @@ import api from "./api.js"
 
 const filmesSet = new Set();
 
+async function adicionarChave() {
+    try {
+      const filmes = await api.buscarFilmes();
+      filmes.forEach(filme => {
+        const chaveFilme = 
+        `${filme.nome.trim().toLowerCase()}`;
+        filmesSet.add(chaveFilme);
+      })
+    } catch (error) {
+      alert('Erro ao adicionar uma chave única');
+      throw error;
+  }
+}
+
 const regexNome = /^[\p{L}0-9\s\p{P}]*$/u;
 const regexGenero = /^\p{L}+(?:\s+|\-\p{L}+)]*$/u;
 
