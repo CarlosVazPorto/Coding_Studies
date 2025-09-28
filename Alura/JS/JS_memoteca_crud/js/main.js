@@ -2,6 +2,7 @@ import ui from "./ui.js"
 import api from "./api.js"
 
 const regexConteudo = /^[\p{L}0-9\s\p{P}]{3,}$/u;
+const regexAutoria = /^[\p{L}\s]{2,20}$/;
 
 function validarConteudo(conteudo) {
     return regexConteudo.test(conteudo);
