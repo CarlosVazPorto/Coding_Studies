@@ -38,6 +38,11 @@ async function manipularSubmissaoFormulario(event) {
         return;
     };
 
+    if (!validarAutoria(autoria)) {
+        alert("É permitida a inclusão somente de letras e espaços, com no mínimo 2 e no máximo 20 caracteres.");
+        return;
+    };
+
     if (!validarData(data)) {
         alert("Não é permitido o cadastro de datas futuras. Selecione outra data.");
         return;
