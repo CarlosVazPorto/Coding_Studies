@@ -56,6 +56,8 @@ async function manipularSubmissaoFormulario(event) {
         return;
     };
 
+    const chaveNovoPensamento = `${conteudo.trim().toLowerCase()}-${autoria.trim().toLowerCase()}`;
+
     try {
         if (id) {
             await api.editarPensamento({ id, conteudo, autoria, data });
