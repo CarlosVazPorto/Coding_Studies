@@ -12,6 +12,10 @@ function validarGenero(genero) {
   return regexGenero.test(genero);
 }
 
+function removerEspacos(string) {
+  return string.replaceAll(/\s+/g, "");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   ui.renderizarFilmes();
 
