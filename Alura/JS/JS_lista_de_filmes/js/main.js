@@ -32,10 +32,20 @@ async function manipularSubmissaoFormulario(event) {
   const genero = document.getElementById("filme-genero").value;
   const data = document.getElementById("data-lancamento").value;
 
+  if (!validarNome(nome)) {
+    alert("Nome inválido. Use letras, números, espaços e/ou pontuação somente.");
+    return;
+  };
+
+  if (!validarGênero(genero)) {
+    alert("Gênero inválido. Use letras, números, espaços e/ou hífen somente.");
+    return;
+  };
+
   if (!validarData(data)) {
     alert("Filme ainda não lançado!");
     return;
-  }
+  };
 
   try {
     if (id) {
@@ -46,7 +56,7 @@ async function manipularSubmissaoFormulario(event) {
     ui.renderizarFilmes();
   } catch {
     alert("Erro ao salvar filme");
-  }
+  };
 }
 
 function manipularCancelamento() {
