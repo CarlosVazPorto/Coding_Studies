@@ -1,6 +1,8 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
+const pensamentosSet = new Set();
+
 function removerEspacosVazios(string) {
     return string.replaceAll(/\s+/g, "");
 }
