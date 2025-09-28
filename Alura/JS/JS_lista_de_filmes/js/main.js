@@ -34,6 +34,7 @@ function removerEspacos(string) {
 
 document.addEventListener("DOMContentLoaded", () => {
   ui.renderizarFilmes();
+  adicionarChave();
 
   const formularioFilme = document.getElementById("filme-form");
   const botaoCancelar = document.getElementById("botao-cancelar");
