@@ -3,6 +3,10 @@ import api from "./api.js"
 
 const regexConteudo = /^[A-Za-z0-9\s]{3,}$/;
 
+function validarConteudo(conteudo) {
+    return regexConteudo.test(conteudo);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPensamentos();
 
@@ -24,9 +28,13 @@ async function manipularSubmissaoFormulario(event) {
     const autoria = document.getElementById("pensamento-autoria").value;
     const data = document.getElementById("pensamento-data").value;
 
+    if (!validarConteudo(conteudo)) {
+        alert("É permitida a inclusão somente de letras, números e espaços, com no mínimo 3 caracteres.");
+    };
+
     if (!validarData(data)) {
         alert("Não é permitido o cadastro de datas futuras. Selecione outra data.");
-    }
+    };
 
     try {
         if (id) {
