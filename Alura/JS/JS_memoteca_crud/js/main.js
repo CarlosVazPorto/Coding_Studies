@@ -1,6 +1,8 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
+const regexConteudo = /^[A-Za-z0-9\s]{3,}$/;
+
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPensamentos();
 
