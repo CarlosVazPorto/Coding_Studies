@@ -36,12 +36,15 @@ async function manipularSubmissaoFormulario(event) {
   const genero = document.getElementById("filme-genero").value;
   const data = document.getElementById("data-lancamento").value;
 
-  if (!validarNome(nome)) {
+  const nomeSemEspacos = removerEspacos(nome);
+  const generoSemEspacos = removerEspacos(genero);
+
+  if (!validarNome(nomeSemEspacos)) {
     alert("Nome inválido. Use letras, números, espaços e/ou pontuação somente.");
     return;
   };
 
-  if (!validarGenero(genero)) {
+  if (!validarGenero(generoSemEspacos)) {
     alert("Gênero inválido. Use letras, números, espaços e/ou hífen somente.");
     return;
   };
