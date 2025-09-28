@@ -34,12 +34,12 @@ async function manipularSubmissaoFormulario(event) {
     const data = document.getElementById("pensamento-data").value;
 
     if (!validarConteudo(conteudo)) {
-        alert("É permitida a inclusão somente de letras, números e espaços, com no mínimo 3 caracteres.");
+        alert("Para o conteúdo é permitida a inclusão somente de letras, números e espaços, com no mínimo 3 caracteres.");
         return;
     };
 
     if (!validarAutoria(autoria)) {
-        alert("É permitida a inclusão somente de letras e espaços, com no mínimo 2 e no máximo 20 caracteres.");
+        alert("Para a autoria é permitida a inclusão somente de letras e espaços, com no mínimo 2 e no máximo 20 caracteres.");
         return;
     };
 
