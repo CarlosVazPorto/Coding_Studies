@@ -52,6 +52,12 @@ async function manipularSubmissaoFormulario(event) {
   const nome = document.getElementById("filme-nome").value;
   const genero = document.getElementById("filme-genero").value;
   const data = document.getElementById("data-lancamento").value;
+  const chaveNovoFilme = `${nome.trim().toLowerCase()}`;
+
+  if(filmesSet.has(chaveNovoFilme)) {
+    alert('Esse filme já existe');
+    return;
+  };
 
   const nomeSemEspacos = removerEspacos(nome);
   const generoSemEspacos = removerEspacos(genero);
