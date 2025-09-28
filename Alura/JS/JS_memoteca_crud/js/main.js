@@ -8,6 +8,10 @@ function validarConteudo(conteudo) {
     return regexConteudo.test(conteudo);
 }
 
+function validarAutoria(autoria) {
+    return regexAutoria.test(autoria);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPensamentos();
 
