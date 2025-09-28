@@ -60,6 +60,11 @@ async function manipularSubmissaoFormulario(event) {
 
     const chaveNovoPensamento = `${conteudo.trim().toLowerCase()}-${autoria.trim().toLowerCase()}`;
 
+    if (pensamentosSet.has(chaveNovoPensamento)) {
+        alert("Pensamento já cadastrado anteriormente.");
+        return;
+    }
+
     try {
         if (id) {
             await api.editarPensamento({ id, conteudo, autoria, data });
