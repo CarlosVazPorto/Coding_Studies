@@ -37,7 +37,7 @@ async function manipularSubmissaoFormulario(event) {
     return;
   };
 
-  if (!validarGênero(genero)) {
+  if (!validarGenero(genero)) {
     alert("Gênero inválido. Use letras, números, espaços e/ou hífen somente.");
     return;
   };
