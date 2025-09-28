@@ -1,7 +1,7 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
-const regexConteudo = /^[A-Za-z0-9\s]{3,}$/;
+const regexConteudo = /^[\p{L}0-9\s\p{P}]{3,}$/u;
 
 function validarConteudo(conteudo) {
     return regexConteudo.test(conteudo);
