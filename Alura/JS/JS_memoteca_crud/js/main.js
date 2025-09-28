@@ -30,10 +30,12 @@ async function manipularSubmissaoFormulario(event) {
 
     if (!validarConteudo(conteudo)) {
         alert("É permitida a inclusão somente de letras, números e espaços, com no mínimo 3 caracteres.");
+        return;
     };
 
     if (!validarData(data)) {
         alert("Não é permitido o cadastro de datas futuras. Selecione outra data.");
+        return;
     };
 
     try {
