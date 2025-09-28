@@ -8,7 +8,7 @@ async function adicionarChaveAoPensamento() {
         const pensamentos = await api.buscarPensamentos();
         pensamentos.forEach(pensamento => {
             const chavePensamento = 
-                `${conteudo.trim().toLowerCase()}-${autoria.trim().toLowerCase()}`;
+                `${pensamento.conteudo.trim().toLowerCase()}-${pensamento.autoria.trim().toLowerCase()}`;
         pensamentosSet.add(chavePensamento);
         })
     } catch (error) {
