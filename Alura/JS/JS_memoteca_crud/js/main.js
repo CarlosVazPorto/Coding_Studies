@@ -37,12 +37,16 @@ async function manipularSubmissaoFormulario(event) {
     const autoria = document.getElementById("pensamento-autoria").value;
     const data = document.getElementById("pensamento-data").value;
 
-    if (!validarConteudo(conteudo)) {
+    const conteudoSemEspacos = removerEspacosVazios(conteudo);
+    const autoriaSemEspacos = removerEspacosVazios(autoria);
+
+
+    if (!validarConteudo(conteudoSemEspacos)) {
         alert("Para o conteúdo é permitida a inclusão somente de letras, números e espaços, com no mínimo 3 caracteres.");
         return;
     };
 
-    if (!validarAutoria(autoria)) {
+    if (!validarAutoria(autoriaSemEspacos)) {
         alert("Para a autoria é permitida a inclusão somente de letras e espaços, com no mínimo 2 e no máximo 20 caracteres.");
         return;
     };
