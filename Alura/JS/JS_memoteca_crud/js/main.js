@@ -3,20 +3,34 @@ import api from "./api.js"
 
 const pensamentosSet = new Set();
 
+async function adicionarChaveAoPensamento() {
+    try {
+        const pensamentos = await api.buscarPensamentos();
+        pensamentos.forEach(pensamento => {
+            const chavePensamento = 
+                `${conteudo.trim().toLowerCase()}-${autoria.trim().toLowerCase()}`;
+        pensamentosSet.add(chavePensamento);
+        })
+    } catch (error) {
+        alert("Erro ao se adicionar uma chave ao pensamento.");
+        throw error;
+    }
+};
+
 function removerEspacosVazios(string) {
     return string.replaceAll(/\s+/g, "");
-}
+};
 
 const regexConteudo = /^[\p{L}0-9\s\p{P}]{3,}$/u;
 const regexAutoria = /^[\p{L}\s]{2,20}$/u;
 
 function validarConteudo(conteudo) {
     return regexConteudo.test(conteudo);
-}
+};
 
 function validarAutoria(autoria) {
     return regexAutoria.test(autoria);
-}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPensamentos();
