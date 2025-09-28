@@ -65,8 +65,10 @@ const ui = {
             day: "numeric",
             timezone: "UTC"
         };
+        
         const dataFormatada = pensamento.data.toLocaleDateString("pt-br", options);
-        pensamentoData.textContent = dataFormatada;
+        const dataComRegex = dataFormatada.replace(/^(\w)/, (match) => match.toUpperCase());
+        pensamentoData.textContent = dataComRegex;
         pensamentoData.classList.add("pensamento-data");
 
         const botaoFavorito = document.createElement("button");
