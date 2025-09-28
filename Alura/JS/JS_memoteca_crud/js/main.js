@@ -1,6 +1,10 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
+function removerEspacosVazios(string) {
+    return string.replaceAll(/\s+/g, "");
+}
+
 const regexConteudo = /^[\p{L}0-9\s\p{P}]{3,}$/u;
 const regexAutoria = /^[\p{L}\s]{2,20}$/u;
 
