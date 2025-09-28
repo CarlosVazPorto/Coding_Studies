@@ -34,6 +34,7 @@ function validarAutoria(autoria) {
 
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPensamentos();
+    adicionarChaveAoPensamento();
 
     const formularioPensamento = document.getElementById("pensamento-form");
     const botaoCancelar = document.getElementById("botao-cancelar");
