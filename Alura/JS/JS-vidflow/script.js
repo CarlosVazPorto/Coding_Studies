@@ -16,5 +16,7 @@ const api = fetch(urlEndpointVideos)
                 </li>
             `;
         })
-
-    );
+    )
+    .catch((error) => {
+        containerVideos.innerHTML = `<p>Houve um erro ao carregar os vídeos: ${error}</p>`
+    });
