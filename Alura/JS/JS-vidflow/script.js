@@ -5,8 +5,11 @@ async function buscarEMostrarVideos() {
     try {
         const busca = await fetch(urlEndpointVideos);
         const videos = await busca.json();
-            
+        
         videos.forEach((video) => {
+            if (video.categoria = "") {
+                throw new Error("Vídeo sem categoria cadastrada");
+            };
             containerVideos.innerHTML += `
                 <li class="videos__item">
                     <iframe src="${video.url}" title="${video.titulo}" frameborder="0" 
