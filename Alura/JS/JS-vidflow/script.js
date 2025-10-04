@@ -7,7 +7,8 @@ const api = fetch(urlEndpointVideos)
         videos.forEach((video) => {
             containerVideos.innerHTML += `
                 <li class="videos__item">
-                    <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="${video.url}" title="${video.titulo}" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="descricao-video">
                         <img class="img-canal" src="${video.imagem}" alt="Logo do canal">
                         <h3 class="titulo-video">${video.titulo}</h3>
