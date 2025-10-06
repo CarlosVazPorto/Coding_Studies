@@ -43,3 +43,15 @@ function filtrarPesquisa() {
         video.style.display = valorFiltro ? titulo.includes(valorFiltro) ? "block" : "none" : "block";
     })
 }
+
+const botaoCategoria = document.querySelectorAll(".superior__item");
+
+botaoCategoria.forEach((botao) => {
+    let nomeCategoria = botao.getAttribute("name");
+    botao.addEventListener("click", () => filtrarPorCategoria(nomeCategoria));
+});
+
+function filtrarPorCategoria(filtro) {
+    const videos = document.querySelectorAll(".videos__item");
+
+}
