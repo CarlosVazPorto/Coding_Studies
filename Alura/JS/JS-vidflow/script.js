@@ -12,8 +12,7 @@ async function buscarEMostrarVideos() {
             };
             containerVideos.innerHTML += `
                 <li class="videos__item">
-                    <iframe src="${video.url}" title="${video.titulo}" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
                     <div class="descricao-video">
                         <img class="img-canal" src="${video.imagem}" alt="Logo do canal">
                         <h3 class="titulo-video">${video.titulo}</h3>
@@ -36,12 +35,12 @@ barraDePesquisa.addEventListener("input", filtrarPesquisa);
 
 function filtrarPesquisa() {
     const videos = document.querySelectorAll(".videos__item");
-    const valorFiltro = barraDePesquisa.value.toLowerCase();
+    const valorFiltroPesquisa = barraDePesquisa.value.toLowerCase();
 
     videos.forEach((video) => {
         const titulo = video.querySelector(".titulo-video").textContent.toLowerCase();
 
-        video.style.display = valorFiltro ? titulo.includes(valorFiltro) ? "block" : "none" : "block";
+        video.style.display = valorFiltroPesquisa ? titulo.includes(valorFiltroPesquisa) ? "block" : "none" : "block";
     })
 }
 
@@ -53,6 +52,14 @@ botaoCategoria.forEach((botao) => {
 });
 
 function filtrarPorCategoria(filtro) {
+    const valorFiltroCategoria = filtro.toLowerCase();
     const videos = document.querySelectorAll(".videos__item");
+    
+    videos.forEach((video) => {
+        const categoria = video.querySelector(".categoria").textContent.toLowerCase();
 
+        const mostrarVideos = categoria.includes(valorFiltroCategoria) || valorFiltroCategoria == "tudo";
+        
+        video.style.display = mostrarVideos ? "block" : "none";
+    });
 }
