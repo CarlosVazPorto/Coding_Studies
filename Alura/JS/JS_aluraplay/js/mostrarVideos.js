@@ -3,9 +3,9 @@ import { conectaApi } from "./conectaApi.js";
 const lista = document.querySelector("[data-lista]");
 
 function constroiCard(titulo, descricao, url, imagem) {
-  const video = document.createElement("li");
-  video.className = "videos__item";
-  video.innerHTML = `
+  const videoElemento = document.createElement("li");
+  videoElemento.className = "videos__item";
+  videoElemento.innerHTML = `
         <iframe width="100%" height="72%" src="${url}"
             title="${titulo}" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -18,10 +18,10 @@ function constroiCard(titulo, descricao, url, imagem) {
         </div>
     `;
 
-  return video;
+  return videoElemento;
 }
 
-async function exibeListaDeVideos() {
+async function exibeVideos() {
   const listaApi = await conectaApi.listaVideos();
   listaApi.forEach((elemento) =>
     lista.appendChild(
@@ -35,4 +35,4 @@ async function exibeListaDeVideos() {
   );
 }
 
-exibeListaDeVideos();
+exibeVideos();
