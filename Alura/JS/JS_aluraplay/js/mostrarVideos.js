@@ -1,3 +1,5 @@
+import { conectaApi } from "./conectaApi.js";
+
 const lista = document.querySelector("[data-lista]");
 
 function constroiCard() {
@@ -17,4 +19,8 @@ function constroiCard() {
     `;
 
   return video;
+}
+
+async function listaVideo() {
+  const lista = await conectaApi.listaVideos();
 }
