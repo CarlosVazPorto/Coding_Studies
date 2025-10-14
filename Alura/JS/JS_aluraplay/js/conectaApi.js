@@ -1,7 +1,7 @@
-const urlVideos = "http://localhost:3000/videos";
+const URL_VIDEOS = "http://localhost:3000/videos";
 
 async function listaVideos() {
-  const conexao = await fetch(urlVideos);
+  const conexao = await fetch(URL_VIDEOS);
   const conexaoConvertida = await conexao.json();
 
   return conexaoConvertida;
