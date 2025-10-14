@@ -71,18 +71,39 @@
       "id": 10
     },
     {
-      "titulo": "Educação coorporativa",
-      "descricao": "4 mil visualizações",
-      "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
+      "titulo": "Na PRÁTICA: o que é uma API (com EXEMPLOS)",
+      "descricao": "2,2 mil visualizações",
+      "url": "https://www.youtube.com/embed/2I_4kSl3F_4?si=I9qXUfgJzd3XEioe",
       "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
       "id": 11
     },
     {
-      "titulo": "Educação coorporativa",
-      "descricao": "7 mil visualizações",
-      "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
+      "titulo": "Tutorial para INICIANTES: aprenda sobre TYPESCRIPT em 16 minutos",
+      "descricao": "1,2 mil visualizações",
+      "url": "https://www.youtube.com/embed/sv9ekpBTk_A?si=alJ9b0jQokj7lQJx",
       "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
       "id": 12
+    },
+    {
+      "titulo": "KUBERNETES descomplicado: entenda NODES, PODS e como organizar seus eventos",
+      "descricao": "529 visualizações",
+      "url": "https://www.youtube.com/embed/j-wceypIdw8?si=pWVeEIxhGZLupZbZ",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 13
+    },
+    {
+      "titulo": "Como começar a programar: FUNDAMENTOS da programação em 13 minutos",
+      "descricao": "565 visualizações",
+      "url": "https://www.youtube.com/embed/d4g3a_tUgdk?si=-K-4fI3xC8FjrzLT",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 14
+    },
+    {
+      "titulo": "Os MELHORES livros de tecnologia para ler em Programação com Roberta Arcoverde | #HipstersPontoTube",
+      "descricao": "1,3 mil visualizações",
+      "url": "https://www.youtube.com/embed/RvWQQRjz1Pw?si=vcfyG55wQbIqvXQa",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 14
     }
   ]
 }
