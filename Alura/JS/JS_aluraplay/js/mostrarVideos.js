@@ -21,6 +21,16 @@ function constroiCard() {
   return video;
 }
 
-async function listaVideo() {
+async function exibeListaDeVideos() {
   const listaApi = await conectaApi.listaVideos();
+  listaApi.forEach((elemento) =>
+    lista.appendChild(
+      constroiCard(
+        elemento.titulo,
+        elemento.descricao,
+        elemento.url,
+        elemento.imagem
+      )
+    )
+  );
 }
