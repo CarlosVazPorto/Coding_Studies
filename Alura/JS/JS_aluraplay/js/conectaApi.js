@@ -27,7 +27,7 @@ async function postaVideo(titulo, descricao, url, imagem) {
 
 async function buscaVideo(termodeBusca) {
   const conexao = await fetch(`${URL_VIDEOS}?q=${termodeBusca}`);
-  const conexaoConvertida = conexao.json();
+  const conexaoConvertida = await conexao.json();
 
   return conexaoConvertida;
 }
