@@ -43,7 +43,21 @@
         );
       }
 
-      ReactDOM.createRoot(document.getElementById("root")).render(<Titulo />);
+      function PaginaDeLogin() {
+        return (
+          <div className="container-login">
+            <img src="./img/imagem-login.png" alt="Uma mulher negra utilizando um computador, com o logo da CodeConnect na parte inferior da imagem" />
+            <section>
+              <form>
+                <Titulo />
+                <SubTitulo />
+              </form>
+            </section>
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<PaginaDeLogin />);
 
     </script>
   </body>
