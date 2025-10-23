@@ -55,6 +55,12 @@
         )
       }
 
+      function Botao() {
+        return (
+          <button type="submit" class="form__botao">Login</button>
+        )
+      }
+
       function PaginaDeLogin() {
         return (
           <div className="container-login">
@@ -71,6 +77,7 @@
                     id="senha"
                     required />
                 </div>
+                <Botao />
               </form>
             </section>
           </div>
