@@ -43,13 +43,13 @@
         );
       }
 
-      function CampoDeDigitacao() {
+      function CampoDeDigitacao({ label, type, placeholder }) {
         return (
           <div className="form__campo-digitacao">
-            <label for="email">E-mail ou usuário</label>
-            <input type="email"
-              placeholder="Digite seu e-mail ou usuário" 
-              id="email" 
+            <label for="CampoDeDigitacao">{label}</label>
+            <input type={type}
+              placeholder={placeholder}
+              id="CampoDeDigitacao" 
               required />
           </div>
         )
@@ -69,14 +69,14 @@
               <form>
                 <Titulo />
                 <SubTitulo />
-                <CampoDeDigitacao />
-                <div className="form__campo-digitacao">
-                  <label for="senha">Senha</label>
-                  <input type="password"
-                    placeholder="Digite sua senha" 
-                    id="senha"
-                    required />
-                </div>
+                <CampoDeDigitacao 
+                  label="E-mail ou usuário"
+                  type="email" 
+                  placeholder="Digite seu e-mail ou usuário" />
+                <CampoDeDigitacao 
+                  label="Senha"
+                  type="password" 
+                  placeholder="Digite sua senha" />
                 <Botao />
               </form>
             </section>
