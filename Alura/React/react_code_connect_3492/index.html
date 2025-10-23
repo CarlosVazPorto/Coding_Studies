@@ -43,6 +43,18 @@
         );
       }
 
+      function CampoDeDigitacao() {
+        return (
+          <div className="form__campo-digitacao">
+            <label for="email">E-mail ou usuário</label>
+            <input type="email"
+              placeholder="Digite seu e-mail ou usuário" 
+              id="email" 
+              required />
+          </div>
+        )
+      }
+
       function PaginaDeLogin() {
         return (
           <div className="container-login">
@@ -51,13 +63,7 @@
               <form>
                 <Titulo />
                 <SubTitulo />
-                <div className="form__campo-digitacao">
-                  <label for="email">E-mail ou usuário</label>
-                  <input type="email"
-                    placeholder="Digite seu e-mail ou usuário" 
-                    id="email" 
-                    required />
-                </div>
+                <CampoDeDigitacao />
                 <div className="form__campo-digitacao">
                   <label for="senha">Senha</label>
                   <input type="password"
