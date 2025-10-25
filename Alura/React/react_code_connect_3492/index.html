@@ -104,7 +104,14 @@
                   placeholder="Digite sua senha"
                   value={senha}
                   setValue={setSenha} />
-                <Checkbox />
+                <fieldset className="form__opcoes">
+                  <Checkbox />
+                  <p>
+                    <a href="#" aria-label="Recuperar senha esquecida">
+                      Esqueci a senha
+                    </a>
+                  </p>
+                </fieldset>
                 <Botao>Login</Botao>
               </form>
             </section>
