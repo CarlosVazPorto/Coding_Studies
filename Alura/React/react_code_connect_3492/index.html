@@ -64,10 +64,7 @@
       }
 
       function PaginaDeLogin() {
-        let email = "karl@teste.com";
-        function substituiValorDoCampo(novoValor) {
-          email = novoValor;
-        }
+        const [email, setEmail] = React.useState("");
 
         return (
           <div className="container-login">
@@ -81,7 +78,7 @@
                   type="email" 
                   placeholder="Digite seu e-mail ou usuário" 
                   value={email}
-                  setValor={substituiValorDoCampo} />
+                  setValor= {setEmail} />
                 <CampoDeDigitacao 
                   label="Senha"
                   type="password" 
