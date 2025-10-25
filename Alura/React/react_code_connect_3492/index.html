@@ -67,11 +67,17 @@
         const [email, setEmail] = React.useState("");
         const [senha, setSenha] = React.useState("");
 
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          console.log(`email: ${email}`);
+          console.log(`senha: ${senha}`);
+        };
+
         return (
           <div className="container-login">
             <img src="./img/imagem-login.png" alt="Uma mulher negra utilizando um computador, com o logo da CodeConnect na parte inferior da imagem" />
             <section>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <Titulo>Login</Titulo>
                 <SubTitulo>Boas-vindas! Faça seu login.</SubTitulo>
                 <CampoDeDigitacao 
