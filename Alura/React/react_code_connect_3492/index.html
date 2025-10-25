@@ -79,7 +79,18 @@
         return (
           <p className={classe}>{children}</p>
         );
-      }
+      };
+
+      function ItemRedesSociais({ link, nome }) {
+        return (
+          <li>
+            <a href={link}>
+              <img src={`./img/${nome}.svg`} alt={`Ícone do ${nome}`} />
+              {nome}
+            </a>
+          </li>
+        );
+      };
 
       function PaginaDeLogin() {
         const [email, setEmail] = React.useState("");
