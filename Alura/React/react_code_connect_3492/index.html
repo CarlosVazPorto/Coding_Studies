@@ -75,6 +75,12 @@
         )
       };
 
+      function Texto({ classe, children }) {
+        return (
+          <p className={classe}>{children}</p>
+        );
+      }
+
       function PaginaDeLogin() {
         const [email, setEmail] = React.useState("");
         const [senha, setSenha] = React.useState("");
