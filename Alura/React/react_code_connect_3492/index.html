@@ -57,6 +57,18 @@
         )
       }
 
+      function Checkbox() {
+        return (
+          <>
+            <div className="form__campo-checkbox">
+              <input type="checkbox" id="lembrar" />
+              <label for="lembrar" />
+            </div>
+            <p className="form__opcoes-texto">Lembrar-me</p>
+          </>
+        )
+      }
+
       function Botao({ children }) {
         return (
           <button type="submit" className="form__botao">{children}</button>
@@ -92,6 +104,7 @@
                   placeholder="Digite sua senha"
                   value={senha}
                   setValue={setSenha} />
+                <Checkbox />
                 <Botao>Login</Botao>
               </form>
             </section>
