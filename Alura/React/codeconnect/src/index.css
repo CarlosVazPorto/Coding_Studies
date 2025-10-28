@@ -11,3 +11,9 @@
   --offwhite: #E1E1E1;
   --branco: #FFFFFF;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
