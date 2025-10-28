@@ -1,1 +1,5 @@
-// componente
+export default function Sidebar() {
+    return (
+        <></>
+    );
+};
