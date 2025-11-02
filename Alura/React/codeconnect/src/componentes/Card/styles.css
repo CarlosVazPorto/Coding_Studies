@@ -55,7 +55,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .conteudo__rodape ul {
@@ -80,6 +79,7 @@
 .rodape__usuario {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 

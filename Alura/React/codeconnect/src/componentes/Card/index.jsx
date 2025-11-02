@@ -1,9 +1,9 @@
+import "./styles.css";
 import Capa from "./assets/capa.png";
 import Code from "./assets/code.svg";
 import Chat from "./assets/chat.svg";
 import Share from "./assets/share.svg";
 import Usuario from "./assets/foto_usuario.svg";
-import "./styles.css";
 
 export default function Card() {
     return (
@@ -33,7 +33,7 @@ export default function Card() {
                         </li>
                     </ul>
 
-                    <div className="rodape_usuario">
+                    <div className="rodape__usuario">
                             <img src={Usuario} alt="Ícone do usuário" />
                             @zezinho
                     </div>
