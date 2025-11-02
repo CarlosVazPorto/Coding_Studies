@@ -1,4 +1,4 @@
-import Capa_2 from "./assets/capa_2.png";
+import Capa from "./assets/capa.png";
 import Code from "./assets/code.svg";
 import Chat from "./assets/chat.svg";
 import Share from "./assets/share.svg";
@@ -9,7 +9,7 @@ export default function Card() {
     return (
         <article className="card">
             <div className="card__imagem">
-                <img src={Capa_2} alt="Imagem do post" />
+                <img src={Capa} alt="Imagem do post" />
             </div>
             <div className="card__conteudo">
                 <div className="conteudo__texto">
