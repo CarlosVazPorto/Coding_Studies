@@ -1,41 +1,49 @@
 import "./styles.css";
-import Capa from "./assets/capa.png";
 import Code from "./assets/code.svg";
 import Chat from "./assets/chat.svg";
 import Share from "./assets/share.svg";
-import Usuario from "./assets/foto_usuario.svg";
 
-export default function Card() {
+export default function Card({ 
+    id, 
+    imagemUrl, 
+    titulo, 
+    resumo, 
+    linhasDeCodigo, 
+    compartilhamentos, 
+    comentarios, 
+    usuario 
+    }) 
+    {
     return (
         <article className="card">
             <div className="card__imagem">
-                <img src={Capa} alt="Imagem do post" />
+                <img src={imagemUrl} alt="Imagem do post" />
             </div>
             <div className="card__conteudo">
                 <div className="conteudo__texto">
-                    <h3>Titulo do post</h3>
-                    <p>Resumo do post</p>
+                    <h3>{titulo}</h3>
+                    <p>{resumo}</p>
                 </div>
 
                 <div className="conteudo__rodape">
                     <ul>
                         <li>
                             <img src={Code} alt="Códigos" />
-                            123
+                            {linhasDeCodigo}
                         </li>
                         <li>
                             <img src={Share} alt="Compartilhamentos" />
-                            321
+                            {compartilhamentos}
                         </li>
                         <li>
                             <img src={Chat} alt="Comentários" />
-                            234
+                            {comentarios}
                         </li>
                     </ul>
 
                     <div className="rodape__usuario">
-                            <img src={Usuario} alt="Ícone do usuário" />
-                            @zezinho
+                            <img src={usuario.imagem} alt="Avatar do usuário" />
+                            {usuario.nome}
                     </div>
                 </div>
             </div>

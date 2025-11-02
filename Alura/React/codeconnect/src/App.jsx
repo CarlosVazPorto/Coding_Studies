@@ -29,7 +29,6 @@ function App() {
               imagemUrl={item.imagem_capa}
               titulo={item.titulo}
               resumo={item.resumo}
-              tags={item.tags}
               linhasDeCodigo={item.linhas_de_codigo}
               compartilhamentos={item.compartilhamentos}
               comentarios={item.comentarios}
