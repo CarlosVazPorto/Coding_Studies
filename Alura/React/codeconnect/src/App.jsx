@@ -14,8 +14,6 @@ function App() {
       .then(dados => setDados(dados));
   }, []);
 
-  console.log(dados);
-
   return (
     <div className="container">
       <Sidebar />
@@ -23,7 +21,23 @@ function App() {
         <BarraDePesquisa />
         <Filtro />
         <Ordenacao />
-        <Card />
+        <ul className="lista-cards">
+          {dados ? dados.map((item, index) => (
+            <li key={index}>
+              <Card 
+              id={item.id}
+              imagemUrl={item.imagem_capa}
+              titulo={item.titulo}
+              resumo={item.resumo}
+              tags={item.tags}
+              linhasDeCodigo={item.linhas_de_codigo}
+              compartilhamentos={item.compartilhamentos}
+              comentarios={item.comentarios}
+              usuario={item.usuario}
+              />
+            </li>
+          )) : null}
+        </ul>
       </div>
     </div>
   );
