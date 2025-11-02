@@ -15,7 +15,7 @@ export default function Card({
     }) 
     {
     return (
-        <article className="card">
+        <article className="card" id={id}>
             <div className="card__imagem">
                 <img src={imagemUrl} alt="Imagem do post" />
             </div>
