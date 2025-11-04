@@ -1,4 +1,4 @@
-![Banner](./assets/banner/front-end__code-connect--feed.png)
+![Banner](src/assets/banner/front-end__code-connect--feed.png)
 
 # Code Connect - Feed
 
