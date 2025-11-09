@@ -1,5 +1,35 @@
-body {
+:root {
+    --fonte-titulos: "Prata", serif;
+    --fonte-textos: "Montserrat", sans-serif;
+    --azul-principal: #6278F7;
+    --verde-principal: #95FFD4;
+    --cinza-principal: #F2F2F2;
+    --programacao-fundos: #D9F7E9;
+    --programacao-destaques: #57C278;
+    --frontend-fundos: #E8F8FF;
+    --frontend-destaques: #82CFFA;
+    --datascience-fundos: #F0F8E2;
+    --datascience-destaques: #A6D157;
+    --devops-fundos: #FDE7E8;
+    --devops-destaques: #E06B69;
+    --ux-fundos: #FAE9F5;
+    --ux-destaques: #DB6EBF;
+    --mobile-fundos: #FFF5D9;
+    --mobile-destaques: #FFBA05;
+    --inovacao-fundos: #FFEEDF;
+    --inovacao-destaques: #FF8A29;
+    --offwhite: #E5E5E5;
+    --branco: #FFFFFF;
+    --preto: #000000;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--offwhite);
+    font-family: var(--fonte-textos);
 }
