@@ -8,6 +8,8 @@ function App() {
       <div>
         <Banner />
         <CampoTexto />
+        <CampoTexto />
+        <CampoTexto />
       </div>
     </>
   );
