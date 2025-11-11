@@ -27,18 +27,23 @@ const Formulario = () => {
                 <CampoTexto
                     label="Nome" 
                     placeholder="Digite seu nome"
+                    required={true}
                 />
                 <CampoTexto 
                     label="Cargo"
                     placeholder="Digite seu cargo"
+                    required={true}
+                    
                 />
                 <CampoTexto 
                     label="Imagem"
                     placeholder="Informe o endereço da imagem"
+                    required={true}
                 />
                 <ListaSuspensa 
                     label="Time"
                     itens={times}
+                    required={true}
                 />
                 <Botao> 
                     Criar card
