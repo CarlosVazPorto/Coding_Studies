@@ -1,0 +1,21 @@
+.lista-suspensa {
+    margin: 1.5em 0;
+    font-family: var(--fonte-textos);
+}
+
+.lista-suspensa label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.lista-suspensa select {
+    background-color: var(--branco);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    border: none;
+    font-size: 1.5em;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
