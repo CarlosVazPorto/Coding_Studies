@@ -1,11 +1,16 @@
 .botao {
     background-color: var(--azul-principal);
-    color: var(--cinza-principal);
+    color: var(--branco);
     font-family: var(--fonte-textos);
     font-size: 1.125em;
     font-weight: 700;
     border-radius: 10px;
+    margin-top: 1em;
     padding: 2em;
     border: none;
     cursor: pointer;
+}
+
+.botao:hover {
+    color: var(--verde-principal);
 }
