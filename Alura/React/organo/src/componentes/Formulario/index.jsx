@@ -35,9 +35,9 @@ const Formulario = () => {
                     label="Time"
                     itens={times}
                 />
-                <Botao 
-                    texto="Criar card"
-                />
+                <Botao> 
+                    Criar card
+                </Botao>
             </form>
         </section>
     );
