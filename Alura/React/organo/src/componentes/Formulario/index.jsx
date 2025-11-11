@@ -29,7 +29,7 @@ const Formulario = () => {
                 />
                 <CampoTexto 
                     label="Imagem"
-                    placeholder="Digite o endereço da imagem"
+                    placeholder="Informe o endereço da imagem"
                 />
                 <ListaSuspensa 
                     label="Time"
