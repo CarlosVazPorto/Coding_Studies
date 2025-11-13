@@ -19,10 +19,11 @@ const Formulario = () => {
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
+    const [time, setTime] = useState('');
     
     const aoSalvar = (evento) => {
         evento.preventDefault();
-        console.log("O formulário foi enviado => ", nome, cargo, imagem);
+        console.log("O formulário foi enviado => ", nome, cargo, imagem, time);
     };
 
     return (
@@ -54,6 +55,8 @@ const Formulario = () => {
                     label="Time"
                     itens={times}
                     required={true}
+                    valor={time}
+                    aoAlterar={valor => setTime(valor)}
                 />
                 <Botao> 
                     Criar card
