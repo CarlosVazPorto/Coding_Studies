@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
@@ -14,10 +15,14 @@ const Formulario = () => {
         'Mobile',
         'Inovação e Gestão'
     ];
+
+    const [nome, setNome] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [imagem, setImagem] = useState('');
     
     const aoSalvar = (evento) => {
         evento.preventDefault();
-        console.log("O formulário foi enviado!");
+        console.log("O formulário foi enviado => ", nome, cargo, imagem);
     };
 
     return (
@@ -28,17 +33,22 @@ const Formulario = () => {
                     label="Nome" 
                     placeholder="Digite seu nome"
                     required={true}
+                    valor={nome}
+                    aoAlterar={valor => setNome(valor)}
                 />
                 <CampoTexto 
                     label="Cargo"
                     placeholder="Digite seu cargo"
                     required={true}
-                    
+                    valor={cargo}
+                    aoAlterar={valor => setCargo(valor)}
                 />
                 <CampoTexto 
                     label="Imagem"
                     placeholder="Informe o endereço da imagem"
                     required={true}
+                    valor={imagem}
+                    aoAlterar={valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
                     label="Time"
