@@ -57,18 +57,9 @@ function App() {
         <Formulario 
           aoCadastrarColaborador={colaborador => aoAdicionarNovoColaborador(colaborador)}
         />
-        <Time
-          nome="Programação" 
-        />
-        <Time
-          nome="Front-End" 
-        />
-        <Time
-          nome="Data Science" 
-        />
-        <Time
-          nome="Devops" 
-        />
+
+        {times.map(time => <Time name={time.nome} />)}
+
       </div>
     </>
   );
