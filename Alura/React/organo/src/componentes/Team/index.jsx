@@ -1,3 +1,4 @@
+import Colaborador from '../Colaborador';
 import './Time.css';
 
 const Time = (props) => {
@@ -14,6 +15,8 @@ const Time = (props) => {
                 {props.name}
             </h3>
         
+            <Colaborador />
+            
         </section>
     );
 };
