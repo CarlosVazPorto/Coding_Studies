@@ -58,7 +58,14 @@ function App() {
           aoCadastrarColaborador={colaborador => aoAdicionarNovoColaborador(colaborador)}
         />
 
-        {times.map(time => <Time name={time.nome} />)}
+        {times.map(time => 
+          <Time 
+            key={time.nome}
+            name={time.nome} 
+            corFundos={time.corFundos}
+            corDestaques={time.corDestaques}
+          />
+        )}
 
       </div>
     </>
