@@ -1,0 +1,14 @@
+.time {
+    text-align: center;
+    padding: 2em;
+    background-color: var(--programacao-fundos);
+}
+
+.time h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2em;
+    color: var(--preto-letras);
+    border-bottom: 4px solid var(--programacao-destaques);
+    display: inline-block;
+    padding-bottom: 0.5em;
+}
