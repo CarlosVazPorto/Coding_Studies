@@ -12,15 +12,15 @@ const Rodape = () => {
                             href="facebook.com"
                             target="_blank"
                         >
-                            <img src="../assets/imagens/facebook-logo.png" alt="Facebook" />
+                            <img src="src/assets/imagens/facebook-logo.png" alt="Facebook" />
                         </a>
                     </li>
                     <li>
                         <a 
-                            href="x.com" 
+                            href="twitter.com" 
                             target="_blank"
                         >
-                            <img src="../assets/imagens/x-logo.png" alt="Twitter" />
+                            <img src="src/assets/imagens/twitter-logo.png" alt="X" />
                         </a>
                     </li>
                     <li>
@@ -28,14 +28,14 @@ const Rodape = () => {
                             href="instagram.com" 
                             target="_blank"
                         >
-                            <img src="../assets/imagens/instagram-logo.png" alt="Instagram" />
+                            <img src="src/assets/imagens/instagram-logo.png" alt="Instagram" />
                         </a>
                     </li>
                 </ul>
             </section>
             
             <section>
-                <img src="../assets/imagens/organo-logo.png" alt="Organo" />
+                <img src="src/assets/imagens/organo-logo.png" alt="Organo" />
             </section>
 
             <section>
