@@ -65,7 +65,7 @@ function App() {
             nome={time.nome} 
             corFundos={time.corFundos}
             corDestaques={time.corDestaques}
-            colaboradores={colaboradores}
+            colaboradores={colaboradores.filter(colaborador => colaborador.time == time.nome)}
           />
         )}
 
