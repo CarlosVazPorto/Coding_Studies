@@ -15,3 +15,8 @@
 .footer ul li:last-child {
     margin-right: 0;
 }
+
+.footer p {
+    font-size: 1.25em;
+    font-family: var(--fonte-textos);
+}
