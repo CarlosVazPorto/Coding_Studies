@@ -1,0 +1,35 @@
+import Colaborador from '../Colaborador';
+import './Time.css';
+
+const Time = (props) => {
+
+    return (
+        <section 
+            className='time'
+            style={ { backgroundColor: props.corFundos } }
+        >
+            
+            <h3 
+            style={ { borderColor: props.corDestaques } }
+            >
+                {props.nome}
+            </h3>
+
+            <div className='colaboradores'>
+                {props.colaboradores.map( 
+                    colaborador => 
+                        <Colaborador 
+                            corDestaques={props.corDestaques}
+                            key={colaborador.nome}
+                            nome={colaborador.nome}
+                            cargo={colaborador.cargo}
+                            imagem={colaborador.imagem}
+                        />
+                )}
+            </div>
+            
+        </section>
+    );
+};
+
+export default Time;

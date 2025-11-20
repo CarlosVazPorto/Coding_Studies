@@ -62,7 +62,7 @@ function App() {
         {times.map(time => 
           <Time 
             key={time.nome}
-            name={time.nome} 
+            nome={time.nome} 
             corFundos={time.corFundos}
             corDestaques={time.corDestaques}
             colaboradores={colaboradores}
