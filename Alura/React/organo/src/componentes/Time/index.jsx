@@ -3,7 +3,7 @@ import './Time.css';
 
 const Time = (props) => {
 
-    return (
+    return (       
         <section 
             className='time'
             style={ { backgroundColor: props.corFundos } }
