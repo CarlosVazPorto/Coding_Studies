@@ -1,0 +1,17 @@
+.footer {
+    background: var(--azul-principal);
+    color: var(--offwhite);
+    padding: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
