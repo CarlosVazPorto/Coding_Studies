@@ -65,6 +65,7 @@ function App() {
             name={time.nome} 
             corFundos={time.corFundos}
             corDestaques={time.corDestaques}
+            colaboradores={colaboradores}
           />
         )}
 

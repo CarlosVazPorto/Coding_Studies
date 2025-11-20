@@ -15,7 +15,7 @@ const Time = (props) => {
                 {props.name}
             </h3>
         
-            
+            {props.colaboradores.map( colaborador => <Colaborador />)}
             
         </section>
     );
