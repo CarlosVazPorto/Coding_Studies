@@ -1,4 +1,4 @@
-![Banner](./src/assets/imagens/Front-End-Organo-Thumbnail.png)
+![Banner](src\assets\imagens\Front-End-Organo-Thumbnail.png)
 
 # Organo
 
