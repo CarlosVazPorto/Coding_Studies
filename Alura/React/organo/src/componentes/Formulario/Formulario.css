@@ -14,4 +14,6 @@
 
 .formulario form h2 {
     font-family: var(--fonte-titulos);
+    font-weight: 400;
+    font-size: 2em;
 }
