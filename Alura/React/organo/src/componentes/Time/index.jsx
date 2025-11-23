@@ -9,7 +9,10 @@ const Time = (props) => {
         
         <section 
             className='time'
-            style={ { backgroundColor: props.corFundos } }
+            style={ { 
+                backgroundColor: props.corFundos, 
+                backgroundImage: 'url(src/assets/imagens/fundo.png)'
+            } }
         >
             
             <h3 
@@ -20,10 +23,10 @@ const Time = (props) => {
 
             <div className='colaboradores'>
                 {props.colaboradores.map( 
-                    colaborador => 
+                    (colaborador, indice) => 
                         <Colaborador 
                             corDestaques={props.corDestaques}
-                            key={colaborador.nome}
+                            key={indice}
                             nome={colaborador.nome}
                             cargo={colaborador.cargo}
                             imagem={colaborador.imagem}
