@@ -2,8 +2,9 @@
 
 # Organo
 
-> Do curso da Alura:
+> Dos cursos da Alura:
 React: desenvolvendo com JavaScript
+React: como os componentes funcionam
 
 O Organo é um aplicativo para organização de equipes.
 
