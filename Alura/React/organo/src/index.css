@@ -30,7 +30,19 @@
     box-sizing: border-box;
 }
 
-/*body {
-    background-color: var(--offwhite);
-    font-family: var(--fonte-textos);
-}*/
+.times {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--azul-principal);
+    border-bottom: 0.25em solid var(--azul-principal);
+    display: inline-block;
+    padding-bottom: 1.5em;
+    margin: 2em 0;
+}
+
+h1, h2 {
+    font-family: var(--fonte-titulos);
+}
