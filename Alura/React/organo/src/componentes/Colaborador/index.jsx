@@ -1,14 +1,14 @@
+import { AiFillCloseCircle } from "react-icons/ai";
 import './Colaborador.css';
 
 const Colaborador = (props) => {
     return (
         <div className='colaborador'>
-            <div 
+            <AiFillCloseCircle
                 className='deletar'
+                size={25}
                 onClick={props.aoDeletar}
-            >
-                Deletar
-            </div>
+            />
             <div 
                 className='cabecalho'
                 style={ { backgroundColor: props.corDestaques } }
