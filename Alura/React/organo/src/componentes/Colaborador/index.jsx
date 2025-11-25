@@ -4,6 +4,12 @@ const Colaborador = (props) => {
     return (
         <div className='colaborador'>
             <div 
+                className='deletar'
+                onClick={props.aoDeletar}
+            >
+                Deletar
+            </div>
+            <div 
                 className='cabecalho'
                 style={ { backgroundColor: props.corDestaques } }
             >
