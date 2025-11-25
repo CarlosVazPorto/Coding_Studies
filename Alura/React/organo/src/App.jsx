@@ -197,7 +197,9 @@ function App() {
     setColaboradores([...colaboradores, colaborador]);
   }; 
 
-  const aoDeletarColaborador = () => {};
+  const aoDeletarColaborador = () => {
+    console.log('Deletando colaborador');
+  };
 
   return (
     <>

@@ -31,11 +31,11 @@ const Time = (props) => {
                                 nome={colaborador.nome}
                                 cargo={colaborador.cargo}
                                 imagem={colaborador.imagem}
-                                aoDeletar={colaborador.aoDeletar}
+                                aoDeletar={props.aoDeletar}
                             />
-                        );
+                        )
                     }
-                )};
+                )}
             </div>
             
         </section>
