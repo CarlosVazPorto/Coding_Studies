@@ -197,6 +197,8 @@ function App() {
     setColaboradores([...colaboradores, colaborador]);
   }; 
 
+  const aoDeletarColaborador = () => {};
+
   return (
     <>
       <div>
@@ -219,6 +221,7 @@ function App() {
               corFundos={time.corFundos}
               corDestaques={time.corDestaques}
               colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+              aoDeletar = {aoDeletarColaborador}
             />
           )}
         </section>
