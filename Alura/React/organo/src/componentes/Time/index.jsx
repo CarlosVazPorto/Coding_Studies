@@ -15,6 +15,8 @@ const Time = (props) => {
             } }
         >
             
+            <input type='color' className='input-cor' />
+
             <h3 
             style={ { borderColor: props.corDestaques } }
             >
