@@ -233,6 +233,7 @@ function App() {
               corDestaques={time.corDestaques}
               colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
               aoDeletar = {aoDeletarColaborador}
+              mudarCor={mudarCorDoTime}
             />
           )}
         </section>
