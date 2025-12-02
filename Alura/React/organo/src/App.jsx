@@ -6,43 +6,43 @@ import Rodape from './componentes/Rodape';
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: 'Programação',
-      corFundos: 'var(--programacao-fundos)',
-      corDestaques: 'var(--programacao-destaques)'
+      corFundos: '#D9F7E9',
+      corDestaques: '#57C278'
     },
     {
       nome: 'Front-End',
-      corFundos: 'var(--frontend-fundos)',
-      corDestaques: 'var(--frontend-destaques)'
+      corFundos: '#E8F8FF',
+      corDestaques: '#82CFFA'
     },
     {
       nome: 'Data Science',
-      corFundos: 'var(--datascience-fundos)',
-      corDestaques: 'var(--datascience-destaques)'
+      corFundos: '#F0F8E2',
+      corDestaques: '#A6D157'
     },
     {
       nome: 'Devops',
-      corFundos: 'var(--devops-fundos)',
-      corDestaques: 'var(--devops-destaques)'
+      corFundos: '#FDE7E8',
+      corDestaques: '#E06B69'
     },
     {
       nome: 'UX e Design',
-      corFundos: 'var(--ux-fundos)',
-      corDestaques: 'var(--ux-destaques)'
+      corFundos: '#FAE9F5',
+      corDestaques: '#DB6EBF'
     },
     {
       nome: 'Mobile',
-      corFundos: 'var(--mobile-fundos)',
-      corDestaques: 'var(--mobile-destaques)'
+      corFundos: '#FFF5D9',
+      corDestaques: '#FFBA05'
     },
     {
       nome: 'Inovação e Gestão',
-      corFundos: 'var(--inovacao-fundos)',
-      corDestaques: 'var(--inovacao-destaques)'
+      corFundos: '#FFEEDF',
+      corDestaques: '#FF8A29'
     },
-  ]
+  ]);
 
   const inicial = [
     {
@@ -199,6 +199,15 @@ function App() {
 
   const aoDeletarColaborador = () => {
     console.log('Deletando colaborador');
+  };
+
+  const mudarCorDoTime = (cor, nome) => {
+    setTimes(times.map(time => {
+      if(time.nome === nome) {
+        time.corDestaques = cor;
+      }
+      return time;
+    }));
   };
 
   return (
