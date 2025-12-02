@@ -19,6 +19,7 @@ const Time = (props) => {
                 type='color' 
                 className='input-cor' 
                 value={props.corDestaques}
+                onChange={props}
             />
 
             <h3 
