@@ -1,5 +1,6 @@
 import Colaborador from '../Colaborador';
 import './Time.css';
+import hexToRgba from 'hex-to-rgba';
 
 const Time = (props) => {
 
@@ -10,7 +11,7 @@ const Time = (props) => {
         <section 
             className='time'
             style={ { 
-                backgroundColor: props.corFundos, 
+                backgroundColor: hexToRgba(props.corDestaques, 0.4), 
                 backgroundImage: 'url(src/assets/imagens/fundo.png)'
             } }
         >
