@@ -6,7 +6,7 @@ import Rodape from './componentes/Rodape';
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: 'Programação',
       corFundos: 'var(--programacao-fundos)',
@@ -42,7 +42,7 @@ function App() {
       corFundos: 'var(--inovacao-fundos)',
       corDestaques: 'var(--inovacao-destaques)'
     },
-  ]
+  ])
 
   const inicial = [
     {
