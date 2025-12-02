@@ -42,7 +42,7 @@ function App() {
       corFundos: 'var(--inovacao-fundos)',
       corDestaques: 'var(--inovacao-destaques)'
     },
-  ])
+  ]);
 
   const inicial = [
     {
@@ -200,6 +200,15 @@ function App() {
   const aoDeletarColaborador = () => {
     console.log('Deletando colaborador');
   };
+
+  const mudarCorDoTime = (cor, nome) => {
+    setTimes(times.map(time => {
+      if (time.nome === nome) {
+        time.corDestaques = cor;
+      }
+      return time;
+    }));
+  }
 
   return (
     <>
