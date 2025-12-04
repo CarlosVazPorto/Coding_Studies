@@ -3,41 +3,49 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Rodape from './componentes/Rodape';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
   const [times, setTimes] = useState([
     {
+      id: uuidv4(),
       nome: 'Programação',
       corFundos: '#D9F7E9',
       corDestaques: '#57C278'
     },
     {
+      id: uuidv4(),
       nome: 'Front-End',
       corFundos: '#E8F8FF',
       corDestaques: '#82CFFA'
     },
     {
+      id: uuidv4(),
       nome: 'Data Science',
       corFundos: '#F0F8E2',
       corDestaques: '#A6D157'
     },
     {
+      id: uuidv4(),
       nome: 'Devops',
       corFundos: '#FDE7E8',
       corDestaques: '#E06B69'
     },
     {
+      id: uuidv4(),
       nome: 'UX e Design',
       corFundos: '#FAE9F5',
       corDestaques: '#DB6EBF'
     },
     {
+      id: uuidv4(),
       nome: 'Mobile',
       corFundos: '#FFF5D9',
       corDestaques: '#FFBA05'
     },
     {
+      id: uuidv4(),
       nome: 'Inovação e Gestão',
       corFundos: '#FFEEDF',
       corDestaques: '#FF8A29'
