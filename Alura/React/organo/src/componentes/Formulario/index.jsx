@@ -50,7 +50,7 @@ const Formulario = (props) => {
                 <CampoTexto 
                     label="Imagem"
                     placeholder="Informe o endereço da imagem"
-                    required={true}
+                    required={false}
                     valor={imagem}
                     aoAlterar={valor => setImagem(valor)}
                 />
@@ -74,7 +74,7 @@ const Formulario = (props) => {
             >
                 <h2>Preencha os dados para criar um novo time</h2>
                 <CampoTexto
-                    label="Nome" 
+                    label="Nome do time" 
                     placeholder="Digite o nome do time"
                     required
                     valor={nomeTime}
