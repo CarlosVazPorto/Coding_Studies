@@ -66,7 +66,12 @@ const Formulario = (props) => {
                 </Botao>
             </form>
 
-            <form onSubmit={aoSalvar}>
+            <form 
+                onSubmit={(evento) => {
+                    evento.preventDefault();
+                    props.cadastrarTime({ nome: nomeTime, cor: corTime });
+                }}
+            >
                 <h2>Preencha os dados para criar um novo time</h2>
                 <CampoTexto
                     label="Nome" 
