@@ -3,6 +3,7 @@ import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const Formulario = (props) => {
 
@@ -11,7 +12,8 @@ const Formulario = (props) => {
     const [imagem, setImagem] = useState('');
     const [time, setTime] = useState('');
     const [nomeTime, setNomeTime] = useState('');
-    const [corTime, setCorTime] = useState('');
+    const genRanHex = size => [...Array(size)].map(() => Math.floor(Math.random() * 16).toString(16)).join('')
+    const [corTime, setCorTime] = useState(`#${genRanHex(6)}`);
     
     const aoSalvar = (evento) => {
         evento.preventDefault();
@@ -19,7 +21,8 @@ const Formulario = (props) => {
             nome,
             cargo,
             imagem,
-            time
+            time,
+            id: uuidv4(),
         });
 
         setNome('');
@@ -31,6 +34,7 @@ const Formulario = (props) => {
 
     return (
         <section className='formulario'>
+            {/*Novo Colaborador*/}
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
                 <CampoTexto
@@ -50,12 +54,11 @@ const Formulario = (props) => {
                 <CampoTexto 
                     label="Imagem"
                     placeholder="Informe o endereço da imagem"
-                    required={false}
                     valor={imagem}
                     aoAlterar={valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
-                    label="Time"
+                    label="Times"
                     itens={props.times}
                     required={true}
                     valor={time}
@@ -66,10 +69,13 @@ const Formulario = (props) => {
                 </Botao>
             </form>
 
+            {/*Novo Time*/}
             <form 
                 onSubmit={(evento) => {
                     evento.preventDefault();
                     props.cadastrarTime({ nome: nomeTime, cor: corTime });
+                    setNomeTime('');
+                    setCorTime(`#${genRanHex(6)}`);
                 }}
             >
                 <h2>Preencha os dados para criar um novo time</h2>
@@ -81,8 +87,8 @@ const Formulario = (props) => {
                     aoAlterar={valor => setNomeTime(valor)}
                 />
                 <CampoTexto 
+                    type='color'
                     label="Cor"
-                    placeholder="Escolha a cor do time"
                     required
                     valor={corTime}
                     aoAlterar={valor => setCorTime(valor)}
