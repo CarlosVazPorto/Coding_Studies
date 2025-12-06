@@ -60,9 +60,31 @@ const Formulario = (props) => {
                     aoAlterar={valor => setTime(valor)}
                 />
                 <Botao> 
-                    Criar card
+                    Criar card de colaborador
                 </Botao>
             </form>
+
+            <form onSubmit={aoSalvar}>
+                <h2>Preencha os dados para criar um novo time</h2>
+                <CampoTexto
+                    label="Nome" 
+                    placeholder="Digite o nome do time"
+                    required
+                    valor={nome}
+                    aoAlterar={valor => setNome(valor)}
+                />
+                <CampoTexto 
+                    label="Cor"
+                    placeholder="Escolha a cor do time"
+                    required
+                    valor={cargo}
+                    aoAlterar={valor => setCargo(valor)}
+                />
+                <Botao> 
+                    Criar um novo time
+                </Botao>
+            </form>
+        
         </section>
     );
 };
