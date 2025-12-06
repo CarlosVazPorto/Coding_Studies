@@ -10,6 +10,8 @@ const Formulario = (props) => {
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
     const [time, setTime] = useState('');
+    const [nomeTime, setNomeTime] = useState('');
+    const [corTime, setCorTime] = useState('');
     
     const aoSalvar = (evento) => {
         evento.preventDefault();
@@ -71,14 +73,14 @@ const Formulario = (props) => {
                     placeholder="Digite o nome do time"
                     required
                     valor={nome}
-                    aoAlterar={valor => setNome(valor)}
+                    aoAlterar={valor => setNomeTime(valor)}
                 />
                 <CampoTexto 
                     label="Cor"
                     placeholder="Escolha a cor do time"
                     required
                     valor={cargo}
-                    aoAlterar={valor => setCargo(valor)}
+                    aoAlterar={valor => setCorTime(valor)}
                 />
                 <Botao> 
                     Criar um novo time
