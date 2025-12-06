@@ -72,14 +72,14 @@ const Formulario = (props) => {
                     label="Nome" 
                     placeholder="Digite o nome do time"
                     required
-                    valor={nome}
+                    valor={nomeTime}
                     aoAlterar={valor => setNomeTime(valor)}
                 />
                 <CampoTexto 
                     label="Cor"
                     placeholder="Escolha a cor do time"
                     required
-                    valor={cargo}
+                    valor={corTime}
                     aoAlterar={valor => setCorTime(valor)}
                 />
                 <Botao> 
