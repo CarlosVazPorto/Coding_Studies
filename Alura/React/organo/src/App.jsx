@@ -270,11 +270,16 @@ function App() {
     }));
   };
 
+  const cadastrarTime = (novoTime) => {
+    setTimes([ ...times, { ...novoTime, id: uuidv4() } ]);
+  }
+
   return (
     <>
       <div>
         <Banner />
         <Formulario 
+          cadastrarTime={cadastrarTime}
           times={times.map(time => time.nome)}
           aoCadastrarColaborador={colaborador => aoAdicionarNovoColaborador(colaborador)}
         />
