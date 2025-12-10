@@ -7,7 +7,7 @@ const Campo = ({ label, type = 'text', valor, aoAlterar, required = false, place
     };
     
     return (
-        <div className="campo">
+        <div className={`campo campo-${type}`}>
             <label>
                 {label}
             </label>
