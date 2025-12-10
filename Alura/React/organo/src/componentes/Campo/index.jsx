@@ -1,21 +1,22 @@
 import './Campo.css';
 
-const Campo = (props) => {
+const Campo = ({ label, type = 'text', valor, aoAlterar, required = false, placeholder }) => {
     
     const aoDigitar = (evento) => {
-        props.aoAlterar(evento.target.value);
+        aoAlterar(evento.target.value);
     };
     
     return (
         <div className="campo">
             <label>
-                {props.label}
+                {label}
             </label>
             <input 
-                value={props.valor}
+                type={type}
+                value={valor}
                 onChange={aoDigitar}
-                required={props.required}
-                placeholder={props.placeholder}
+                required={required}
+                placeholder={placeholder}
             />
         </div>
     );
