@@ -1,13 +1,13 @@
-import './CampoTexto.css';
+import './Campo.css';
 
-const CampoTexto = (props) => {
+const Campo = (props) => {
     
     const aoDigitar = (evento) => {
         props.aoAlterar(evento.target.value);
     };
     
     return (
-        <div className="campo-texto">
+        <div className="campo">
             <label>
                 {props.label}
             </label>
@@ -21,4 +21,4 @@ const CampoTexto = (props) => {
     );
 };
 
-export default CampoTexto;
+export default Campo;
