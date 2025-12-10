@@ -4,6 +4,8 @@ import hexToRgba from 'hex-to-rgba';
 
 const Time = (props) => {
 
+    const hexCorDestaques = props.corDestaques;
+
     return (
         
         (props.colaboradores.length > 0) && 
@@ -11,7 +13,7 @@ const Time = (props) => {
         <section 
             className='time'
             style={ { 
-                backgroundColor: hexToRgba(props.corDestaques, 0.4), 
+                backgroundColor: hexToRgba(hexCorDestaques, 0.4), 
                 backgroundImage: 'url(src/assets/imagens/fundo.png)'
             } }
         >
