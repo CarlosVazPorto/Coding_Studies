@@ -19,3 +19,8 @@
     padding: 1.5em;
     box-sizing: border-box;
 }
+
+.campo-color input {
+    height: 2em;
+    padding: 0.25em 1em;
+}
