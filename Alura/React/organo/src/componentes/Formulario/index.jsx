@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Botao from '../Botao';
-import CampoTexto from '../CampoTexto';
+import Campo from '../Campo';
 import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css';
 import { v4 as uuidv4 } from 'uuid';
@@ -37,21 +37,21 @@ const Formulario = (props) => {
             {/*Novo Colaborador*/}
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto
+                <Campo
                     label="Nome" 
                     placeholder="Digite seu nome"
                     required={true}
                     valor={nome}
                     aoAlterar={valor => setNome(valor)}
                 />
-                <CampoTexto 
+                <Campo
                     label="Cargo"
                     placeholder="Digite seu cargo"
                     required={true}
                     valor={cargo}
                     aoAlterar={valor => setCargo(valor)}
                 />
-                <CampoTexto 
+                <Campo
                     label="Imagem"
                     placeholder="Informe o endereço da imagem"
                     valor={imagem}
@@ -79,14 +79,14 @@ const Formulario = (props) => {
                 }}
             >
                 <h2>Preencha os dados para criar um novo time</h2>
-                <CampoTexto
+                <Campo
                     label="Nome do time" 
                     placeholder="Digite o nome do time"
                     required
                     valor={nomeTime}
                     aoAlterar={valor => setNomeTime(valor)}
                 />
-                <CampoTexto 
+                <Campo
                     type='color'
                     label="Cor"
                     required
