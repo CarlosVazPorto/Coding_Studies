@@ -33,7 +33,7 @@ const Colaborador = ({ corDestaques, aoDeletar, ...props }) => {
                         /> 
                         : 
                         <AiOutlineHeart 
-                            onClick={props.aoFavoritar}
+                            onClick={props.time.aoFavoritar}
                         />}
                 </div>
             </div>
