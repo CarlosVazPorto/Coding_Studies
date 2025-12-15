@@ -26,7 +26,15 @@ const Colaborador = ({ corDestaques, aoDeletar, ...props }) => {
                     {props.cargo}
                 </h5>
                 <div className='favoritar'>
-                    {props.favorito ? <AiFillHeart /> : <AiOutlineHeart />}
+                    {props.favorito 
+                        ? 
+                        <AiFillHeart 
+                            onClick={props.aoFavoritar}
+                        /> 
+                        : 
+                        <AiOutlineHeart 
+                            onClick={props.aoFavoritar}
+                        />}
                 </div>
             </div>
         </div>
