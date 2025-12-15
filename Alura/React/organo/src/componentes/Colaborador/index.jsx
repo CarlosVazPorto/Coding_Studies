@@ -32,11 +32,13 @@ const Colaborador = ({ corDestaques, aoDeletar, aoFavoritar, ...props }) => {
                 <div className='favoritar'>
                     {props.favorito 
                         ? 
-                        <AiFillHeart 
+                        <AiFillHeart
+                            size={30} 
                             onClick={favoritar}
                         /> 
                         : 
                         <AiOutlineHeart 
+                            size={30}
                             onClick={favoritar}
                         />}
                 </div>
