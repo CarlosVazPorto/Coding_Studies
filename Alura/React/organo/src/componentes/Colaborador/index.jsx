@@ -25,6 +25,9 @@ const Colaborador = ({ corDestaques, aoDeletar, ...props }) => {
                 <h5>
                     {props.cargo}
                 </h5>
+                <div className='favoritar'>
+                    {props.colaborador.favorito ? 'favorito' : 'não favorito'}
+                </div>
             </div>
         </div>
     );
