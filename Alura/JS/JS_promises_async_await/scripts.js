@@ -76,7 +76,13 @@ inputTags.addEventListener("keypress", async (evento) => {
                 const tagNaLista = await verificarTagsDisponiveis(tagTexto);
                 if (tagNaLista) {
                     const tagNova = document.createElement("li");
-                    tagNova.innerHTML = `<p>${tagTexto}</p> <img src="./img/close-black.svg" class="remove-tag">`;
+                    const tagTextoElemento = document.createElement("p");
+                    tagTextoElemento.textContent = tagTexto;
+                    const botaoRemover = document.createElement("img");
+                    botaoRemover.src = "./img/close-black.svg";
+                    botaoRemover.className = "remove-tag";
+                    tagNova.appendChild(tagTextoElemento);
+                    tagNova.appendChild(botaoRemover);
                     listaTags.appendChild(tagNova);
                     inputTags.value = "";
                 } else {
